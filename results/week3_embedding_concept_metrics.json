@@ -1,0 +1,23 @@
+{
+  "n_test_points": 85,
+  "precision": 0.895,
+  "recall": 0.829,
+  "f1": 0.861,
+  "confusion_matrix": {
+    "labels": [
+      "not_covered",
+      "covered"
+    ],
+    "matrix": [
+      [
+        40,
+        4
+      ],
+      [
+        7,
+        34
+      ]
+    ]
+  },
+  "mean_best_sentence_similarity": 0.854
+}

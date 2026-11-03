@@ -1,0 +1,65 @@
+[
+  {
+    "student_id": "23D001",
+    "question": "Q1",
+    "answer_text": "A stack works on Last-In-First-Out order, so the last element added is the first one removed, like a stack of plates where you take from the top. A queue works on First-In-First-Out order, so the first element added is the first one removed, like people standing in a line waiting for a bus.",
+    "page": 1,
+    "confidence": 0.94
+  },
+  {
+    "student_id": "23D001",
+    "question": "Q2",
+    "answer_text": "A list can be changed after it is created, but a tuple cannot be modified once it is defined. Lists use [] and tuples use ().",
+    "page": 1,
+    "confidence": 0.91
+  },
+  {
+    "student_id": "23D002",
+    "question": "Q1",
+    "page": 1,
+    "confidence": 0.88,
+    "answer_text": "A stack works on Last-In-First-Out order, so the last elernent added is the first one removed, like a stack of p1ates where you take from the top. A queue works on First-In-First-Out order, so the first element added is the first one removed, like people standing in a Iine waiting for a bus."
+  },
+  {
+    "student_id": "23D002",
+    "question": "Q3",
+    "page": 3,
+    "confidence": 0.9,
+    "answer_text": "A Type I error happens when we reject a null hypothesis that is actually true - a false positive - and its probability is alpha."
+  },
+  {
+    "student_id": "23D002",
+    "question": "Q3",
+    "page": 4,
+    "confidence": 0.74,
+    "answer_text": "A Type II error happens when we fail to reject a null hypothesis that is actually false - a false negative - with probability beta."
+  },
+  {
+    "student_id": "23D003",
+    "question": "Q1",
+    "page": 1,
+    "confidence": 0.95,
+    "answer_text": "A stack follows a First-In-First-Out order, similar to people standing in a line waiting for a bus, while a queue follows a Last-In-First-Out order, similar to a stack of plates where you take the top one first."
+  },
+  {
+    "student_id": "23D003",
+    "question": "Q4",
+    "page": 2,
+    "confidence": 0.62,
+    "answer_text": "Bias is the err0r from a modeI that is too simp1e which causes underfitting. Variance is the error from a model too sensitive to the tra1ning data."
+  },
+  {
+    "student_id": "23D004",
+    "question": "Q2",
+    "answer_text": "",
+    "page": 1,
+    "confidence": 0.3
+  },
+  {
+    "student_id": "23D004",
+    "question": "Q9",
+    "answer_text": "Some answer to a question we have no key for.",
+    "page": 5,
+    "confidence": 0.92
+  }
+]

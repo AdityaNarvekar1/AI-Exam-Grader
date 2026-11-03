@@ -1,0 +1,38 @@
+{
+  "predictor": "week6_hybrid",
+  "n": 70,
+  "mean_nMAE": 0.1414,
+  "AURC": 0.0701,
+  "AURC_random_order": 0.1414,
+  "AURC_oracle_order": 0.0421,
+  "risk_at_coverage": {
+    "50%": 0.0743,
+    "60%": 0.0929,
+    "70%": 0.099,
+    "80%": 0.1,
+    "90%": 0.1198,
+    "100%": 0.1414
+  },
+  "share_of_oracle_gain_recovered": 0.718,
+  "week6_threshold_0.7": {
+    "flagged_frac": 0.386,
+    "nMAE_kept": 0.0953,
+    "nMAE_flagged": 0.2148
+  },
+  "conformal_alpha_0.2": {
+    "target": 0.8,
+    "empirical_coverage": 0.814,
+    "mean_half_width_as_pct_of_max": 23.9
+  },
+  "conformal_alpha_0.1": {
+    "target": 0.9,
+    "empirical_coverage": 0.929,
+    "mean_half_width_as_pct_of_max": 39.3
+  },
+  "mean_nMAE_cluster_bootstrap": {
+    "estimate": 0.141,
+    "ci_low": 0.107,
+    "ci_high": 0.177,
+    "n_groups": 15
+  }
+}

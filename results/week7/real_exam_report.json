@@ -1,0 +1,1031 @@
+{
+  "graders_run": [
+    "const",
+    "length",
+    "tfidf",
+    "lexical"
+  ],
+  "graders_unavailable": [],
+  "mcq": {
+    "per_student": {
+      "Student_11": {
+        "teacher": 10,
+        "auto_csv_key": 10.0,
+        "auto_if_Q1_is_D": 11.0,
+        "ocr_Q1_letter": "D"
+      },
+      "Student_23": {
+        "teacher": 10,
+        "auto_csv_key": 10.0,
+        "auto_if_Q1_is_D": 10.0,
+        "ocr_Q1_letter": "A"
+      },
+      "Student_34": {
+        "teacher": 13,
+        "auto_csv_key": 12.0,
+        "auto_if_Q1_is_D": 13.0,
+        "ocr_Q1_letter": "D"
+      },
+      "Student_35": {
+        "teacher": 11,
+        "auto_csv_key": 10.0,
+        "auto_if_Q1_is_D": 10.0,
+        "ocr_Q1_letter": "A"
+      },
+      "Student_50": {
+        "teacher": 13,
+        "auto_csv_key": 12.0,
+        "auto_if_Q1_is_D": 13.0,
+        "ocr_Q1_letter": "D"
+      }
+    },
+    "exact_match_students_csv_key": 2,
+    "exact_match_students_Q1_D": 3,
+    "note": "Teacher ticks D for Q1 on every script; answer_key.csv says B. Student_11 wrote C (OCR read D), so with key D the OCR error would award her a mark she did not earn."
+  },
+  "counts": {
+    "short_answer_slots": 75,
+    "attempted_per_scan": 65,
+    "not_attempted": 10,
+    "ocr_found_but_not_attempted": 0,
+    "teacher_mark_distribution": {
+      "0": 9,
+      "1": 15,
+      "2": 41
+    },
+    "marks_inferred_from_total": 5
+  },
+  "ocr_quality": {
+    "n_attempted": 65,
+    "n_missed_not_found": 3,
+    "n_found": 62,
+    "median_CER_found": 0.056,
+    "mean_CER_found": 0.11,
+    "median_WER_found": 0.133,
+    "mean_WER_found": 0.195,
+    "n_truncated_len_ratio_lt_0.75": 2,
+    "n_misplaced": 0,
+    "n_bad_any": 15,
+    "missed_items": [
+      "Student_11/Q34 (teacher 2)",
+      "Student_34/Q32 (teacher 2)",
+      "Student_35/Q32 (teacher 1)"
+    ],
+    "misplaced_items": [],
+    "truncated_items": [
+      "Student_11/Q24 (0.51)",
+      "Student_35/Q24 (0.56)"
+    ],
+    "MCQ_letters_note": "MCQ letters checked against the scans: 99 of 100 match; Student_11 Q1 wrote C, OCR read D."
+  },
+  "ocr_review_routing": {
+    "definition_of_bad_ocr": "not found, misplaced, CER > 0.15, or < 75% of the words",
+    "ocr_conf_lt_0.8_or_not_found": {
+      "flagged": 17,
+      "caught_bad": 11,
+      "missed_bad": 4,
+      "precision": 0.65,
+      "recall": 0.73
+    },
+    "ocr_conf_lt_0.9_or_not_found": {
+      "flagged": 44,
+      "caught_bad": 13,
+      "missed_bad": 2,
+      "precision": 0.3,
+      "recall": 0.87
+    },
+    "group1_needs_review_or_not_found": {
+      "flagged": 12,
+      "caught_bad": 4,
+      "missed_bad": 11,
+      "precision": 0.33,
+      "recall": 0.27
+    },
+    "any_group1_signal": {
+      "flagged": 25,
+      "caught_bad": 11,
+      "missed_bad": 4,
+      "precision": 0.44,
+      "recall": 0.73
+    }
+  },
+  "short_answer_results": {
+    "const|authored|clean": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 0.769,
+        "MAE_ci95": {
+          "estimate": 0.769,
+          "ci_low": 0.672,
+          "ci_high": 0.862,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.231,
+        "within_1_mark": 1.0,
+        "QWK_0_1_2": 0.0,
+        "spearman": null,
+        "mean_pred": 1.0,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.66,
+        "MAE_ci95": {
+          "estimate": 0.66,
+          "ci_low": 0.573,
+          "ci_high": 0.762,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.231,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.528,
+        "spearman": -0.599,
+        "mean_pred": 1.49,
+        "mean_teacher": 1.492
+      }
+    },
+    "const|authored|ocr": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 0.815,
+        "MAE_ci95": {
+          "estimate": 0.815,
+          "ci_low": 0.696,
+          "ci_high": 0.938,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.215,
+        "within_1_mark": 0.969,
+        "QWK_0_1_2": -0.019,
+        "spearman": -0.036,
+        "mean_pred": 0.954,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.66,
+        "MAE_ci95": {
+          "estimate": 0.66,
+          "ci_low": 0.573,
+          "ci_high": 0.762,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.231,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.528,
+        "spearman": -0.599,
+        "mean_pred": 1.49,
+        "mean_teacher": 1.492
+      }
+    },
+    "const|auto|clean": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 0.769,
+        "MAE_ci95": {
+          "estimate": 0.769,
+          "ci_low": 0.672,
+          "ci_high": 0.862,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.231,
+        "within_1_mark": 1.0,
+        "QWK_0_1_2": 0.0,
+        "spearman": null,
+        "mean_pred": 1.0,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.66,
+        "MAE_ci95": {
+          "estimate": 0.66,
+          "ci_low": 0.573,
+          "ci_high": 0.762,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.231,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.528,
+        "spearman": -0.599,
+        "mean_pred": 1.49,
+        "mean_teacher": 1.492
+      }
+    },
+    "const|auto|ocr": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 0.815,
+        "MAE_ci95": {
+          "estimate": 0.815,
+          "ci_low": 0.696,
+          "ci_high": 0.938,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.215,
+        "within_1_mark": 0.969,
+        "QWK_0_1_2": -0.019,
+        "spearman": -0.036,
+        "mean_pred": 0.954,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.66,
+        "MAE_ci95": {
+          "estimate": 0.66,
+          "ci_low": 0.573,
+          "ci_high": 0.762,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.231,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.528,
+        "spearman": -0.599,
+        "mean_pred": 1.49,
+        "mean_teacher": 1.492
+      }
+    },
+    "length|authored|clean": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 0.869,
+        "MAE_ci95": {
+          "estimate": 0.869,
+          "ci_low": 0.762,
+          "ci_high": 0.986,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.2,
+        "within_1_mark": 0.831,
+        "QWK_0_1_2": 0.073,
+        "spearman": 0.198,
+        "mean_pred": 0.854,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.657,
+        "MAE_ci95": {
+          "estimate": 0.657,
+          "ci_low": 0.566,
+          "ci_high": 0.761,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.585,
+        "within_1_mark": 0.877,
+        "QWK_0_1_2": 0.033,
+        "spearman": -0.156,
+        "mean_pred": 1.49,
+        "mean_teacher": 1.492
+      }
+    },
+    "length|authored|ocr": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 0.9,
+        "MAE_ci95": {
+          "estimate": 0.9,
+          "ci_low": 0.777,
+          "ci_high": 1.024,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.2,
+        "within_1_mark": 0.831,
+        "QWK_0_1_2": 0.093,
+        "spearman": 0.206,
+        "mean_pred": 0.823,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.635,
+        "MAE_ci95": {
+          "estimate": 0.635,
+          "ci_low": 0.534,
+          "ci_high": 0.745,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.6,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": 0.191,
+        "spearman": -0.111,
+        "mean_pred": 1.49,
+        "mean_teacher": 1.492
+      }
+    },
+    "length|auto|clean": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 0.869,
+        "MAE_ci95": {
+          "estimate": 0.869,
+          "ci_low": 0.762,
+          "ci_high": 0.986,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.2,
+        "within_1_mark": 0.831,
+        "QWK_0_1_2": 0.073,
+        "spearman": 0.198,
+        "mean_pred": 0.854,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.657,
+        "MAE_ci95": {
+          "estimate": 0.657,
+          "ci_low": 0.566,
+          "ci_high": 0.761,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.585,
+        "within_1_mark": 0.877,
+        "QWK_0_1_2": 0.033,
+        "spearman": -0.156,
+        "mean_pred": 1.49,
+        "mean_teacher": 1.492
+      }
+    },
+    "length|auto|ocr": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 0.9,
+        "MAE_ci95": {
+          "estimate": 0.9,
+          "ci_low": 0.777,
+          "ci_high": 1.024,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.2,
+        "within_1_mark": 0.831,
+        "QWK_0_1_2": 0.093,
+        "spearman": 0.206,
+        "mean_pred": 0.823,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.635,
+        "MAE_ci95": {
+          "estimate": 0.635,
+          "ci_low": 0.534,
+          "ci_high": 0.745,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.6,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": 0.191,
+        "spearman": -0.111,
+        "mean_pred": 1.49,
+        "mean_teacher": 1.492
+      }
+    },
+    "tfidf|authored|clean": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 1.054,
+        "MAE_ci95": {
+          "estimate": 1.054,
+          "ci_low": 0.896,
+          "ci_high": 1.217,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.185,
+        "within_1_mark": 0.615,
+        "QWK_0_1_2": 0.026,
+        "spearman": 0.143,
+        "mean_pred": 0.608,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.672,
+        "MAE_ci95": {
+          "estimate": 0.672,
+          "ci_low": 0.57,
+          "ci_high": 0.787,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.338,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.269,
+        "spearman": -0.25,
+        "mean_pred": 1.495,
+        "mean_teacher": 1.492
+      }
+    },
+    "tfidf|authored|ocr": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 1.123,
+        "MAE_ci95": {
+          "estimate": 1.123,
+          "ci_low": 0.94,
+          "ci_high": 1.305,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.185,
+        "within_1_mark": 0.538,
+        "QWK_0_1_2": 0.016,
+        "spearman": 0.123,
+        "mean_pred": 0.508,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.678,
+        "MAE_ci95": {
+          "estimate": 0.678,
+          "ci_low": 0.58,
+          "ci_high": 0.79,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.354,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.189,
+        "spearman": -0.251,
+        "mean_pred": 1.491,
+        "mean_teacher": 1.492
+      }
+    },
+    "tfidf|auto|clean": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 1.054,
+        "MAE_ci95": {
+          "estimate": 1.054,
+          "ci_low": 0.896,
+          "ci_high": 1.217,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.185,
+        "within_1_mark": 0.615,
+        "QWK_0_1_2": 0.026,
+        "spearman": 0.143,
+        "mean_pred": 0.608,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.672,
+        "MAE_ci95": {
+          "estimate": 0.672,
+          "ci_low": 0.57,
+          "ci_high": 0.787,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.338,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.269,
+        "spearman": -0.25,
+        "mean_pred": 1.495,
+        "mean_teacher": 1.492
+      }
+    },
+    "tfidf|auto|ocr": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 1.123,
+        "MAE_ci95": {
+          "estimate": 1.123,
+          "ci_low": 0.94,
+          "ci_high": 1.305,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.185,
+        "within_1_mark": 0.538,
+        "QWK_0_1_2": 0.016,
+        "spearman": 0.123,
+        "mean_pred": 0.508,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.678,
+        "MAE_ci95": {
+          "estimate": 0.678,
+          "ci_low": 0.58,
+          "ci_high": 0.79,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.354,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.189,
+        "spearman": -0.251,
+        "mean_pred": 1.491,
+        "mean_teacher": 1.492
+      }
+    },
+    "lexical|authored|clean": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 0.785,
+        "MAE_ci95": {
+          "estimate": 0.785,
+          "ci_low": 0.567,
+          "ci_high": 1.0,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.431,
+        "within_1_mark": 0.785,
+        "QWK_0_1_2": 0.16,
+        "spearman": 0.203,
+        "mean_pred": 1.015,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.64,
+        "MAE_ci95": {
+          "estimate": 0.64,
+          "ci_low": 0.53,
+          "ci_high": 0.763,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.446,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": 0.107,
+        "spearman": -0.103,
+        "mean_pred": 1.494,
+        "mean_teacher": 1.492
+      }
+    },
+    "lexical|authored|ocr": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 0.862,
+        "MAE_ci95": {
+          "estimate": 0.862,
+          "ci_low": 0.623,
+          "ci_high": 1.103,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.385,
+        "within_1_mark": 0.754,
+        "QWK_0_1_2": 0.169,
+        "spearman": 0.245,
+        "mean_pred": 0.846,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.638,
+        "MAE_ci95": {
+          "estimate": 0.638,
+          "ci_low": 0.53,
+          "ci_high": 0.759,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.538,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": 0.229,
+        "spearman": -0.1,
+        "mean_pred": 1.486,
+        "mean_teacher": 1.492
+      }
+    },
+    "lexical|auto|clean": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 1.246,
+        "MAE_ci95": {
+          "estimate": 1.246,
+          "ci_low": 0.984,
+          "ci_high": 1.508,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.231,
+        "within_1_mark": 0.523,
+        "QWK_0_1_2": 0.03,
+        "spearman": 0.077,
+        "mean_pred": 0.369,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.668,
+        "MAE_ci95": {
+          "estimate": 0.668,
+          "ci_low": 0.581,
+          "ci_high": 0.767,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.354,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.249,
+        "spearman": -0.362,
+        "mean_pred": 1.492,
+        "mean_teacher": 1.492
+      }
+    },
+    "lexical|auto|ocr": {
+      "zero_shot": {
+        "n": 65,
+        "MAE": 1.308,
+        "MAE_ci95": {
+          "estimate": 1.308,
+          "ci_low": 1.044,
+          "ci_high": 1.562,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.215,
+        "within_1_mark": 0.477,
+        "QWK_0_1_2": 0.002,
+        "spearman": 0.003,
+        "mean_pred": 0.308,
+        "mean_teacher": 1.492
+      },
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.676,
+        "MAE_ci95": {
+          "estimate": 0.676,
+          "ci_low": 0.587,
+          "ci_high": 0.778,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.231,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.527,
+        "spearman": -0.597,
+        "mean_pred": 1.495,
+        "mean_teacher": 1.492
+      }
+    },
+    "teacher_mean_loqo|-|clean": {
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.66,
+        "MAE_ci95": {
+          "estimate": 0.66,
+          "ci_low": 0.573,
+          "ci_high": 0.762,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.231,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.528,
+        "spearman": -0.599,
+        "mean_pred": 1.49,
+        "mean_teacher": 1.492
+      }
+    },
+    "length_loqo|-|clean": {
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.61,
+        "MAE_ci95": {
+          "estimate": 0.61,
+          "ci_low": 0.497,
+          "ci_high": 0.73,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.508,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": 0.128,
+        "spearman": 0.153,
+        "mean_pred": 1.493,
+        "mean_teacher": 1.492
+      }
+    },
+    "teacher_mean_loqo|-|ocr": {
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.66,
+        "MAE_ci95": {
+          "estimate": 0.66,
+          "ci_low": 0.573,
+          "ci_high": 0.762,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.231,
+        "within_1_mark": 0.862,
+        "QWK_0_1_2": -0.528,
+        "spearman": -0.599,
+        "mean_pred": 1.49,
+        "mean_teacher": 1.492
+      }
+    },
+    "length_loqo|-|ocr": {
+      "calibrated_loqo": {
+        "n": 65,
+        "MAE": 0.701,
+        "MAE_ci95": {
+          "estimate": 0.701,
+          "ci_low": 0.581,
+          "ci_high": 0.842,
+          "n_groups": 15
+        },
+        "exact_agree_rounded": 0.4,
+        "within_1_mark": 0.831,
+        "QWK_0_1_2": -0.17,
+        "spearman": -0.189,
+        "mean_pred": 1.435,
+        "mean_teacher": 1.492
+      }
+    }
+  },
+  "ocr_effect_on_scores": {
+    "const|authored": {
+      "MAE_clean": 0.769,
+      "MAE_ocr": 0.815,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.046,
+        "ci_low": 0.0,
+        "ci_high": 0.119,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.046,
+      "items_shift_ge_1_mark": 3
+    },
+    "const|auto": {
+      "MAE_clean": 0.769,
+      "MAE_ocr": 0.815,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.046,
+        "ci_low": 0.0,
+        "ci_high": 0.119,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.046,
+      "items_shift_ge_1_mark": 3
+    },
+    "length|authored": {
+      "MAE_clean": 0.869,
+      "MAE_ocr": 0.9,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.031,
+        "ci_low": -0.024,
+        "ci_high": 0.108,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.062,
+      "items_shift_ge_1_mark": 1
+    },
+    "length|auto": {
+      "MAE_clean": 0.869,
+      "MAE_ocr": 0.9,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.031,
+        "ci_low": -0.024,
+        "ci_high": 0.108,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.062,
+      "items_shift_ge_1_mark": 1
+    },
+    "tfidf|authored": {
+      "MAE_clean": 1.054,
+      "MAE_ocr": 1.123,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.069,
+        "ci_low": 0.0,
+        "ci_high": 0.136,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.1,
+      "items_shift_ge_1_mark": 4
+    },
+    "tfidf|auto": {
+      "MAE_clean": 1.054,
+      "MAE_ocr": 1.123,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.069,
+        "ci_low": 0.0,
+        "ci_high": 0.136,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.1,
+      "items_shift_ge_1_mark": 4
+    },
+    "lexical|authored": {
+      "MAE_clean": 0.785,
+      "MAE_ocr": 0.862,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.077,
+        "ci_low": 0.028,
+        "ci_high": 0.134,
+        "n_groups": 15,
+        "excludes_zero": true
+      },
+      "mean_abs_score_shift": 0.2,
+      "items_shift_ge_1_mark": 12
+    },
+    "lexical|auto": {
+      "MAE_clean": 1.246,
+      "MAE_ocr": 1.308,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.062,
+        "ci_low": 0.0,
+        "ci_high": 0.138,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.062,
+      "items_shift_ge_1_mark": 3
+    },
+    "const+cal|authored": {
+      "MAE_clean": 0.66,
+      "MAE_ocr": 0.66,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.0,
+      "items_shift_ge_1_mark": 0
+    },
+    "const+cal|auto": {
+      "MAE_clean": 0.66,
+      "MAE_ocr": 0.66,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.0,
+      "items_shift_ge_1_mark": 0
+    },
+    "length+cal|authored": {
+      "MAE_clean": 0.657,
+      "MAE_ocr": 0.635,
+      "MAE_increase_from_OCR": {
+        "estimate": -0.021,
+        "ci_low": -0.057,
+        "ci_high": 0.015,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.101,
+      "items_shift_ge_1_mark": 1
+    },
+    "length+cal|auto": {
+      "MAE_clean": 0.657,
+      "MAE_ocr": 0.635,
+      "MAE_increase_from_OCR": {
+        "estimate": -0.021,
+        "ci_low": -0.057,
+        "ci_high": 0.015,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.101,
+      "items_shift_ge_1_mark": 1
+    },
+    "tfidf+cal|authored": {
+      "MAE_clean": 0.672,
+      "MAE_ocr": 0.678,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.006,
+        "ci_low": -0.008,
+        "ci_high": 0.02,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.048,
+      "items_shift_ge_1_mark": 0
+    },
+    "tfidf+cal|auto": {
+      "MAE_clean": 0.672,
+      "MAE_ocr": 0.678,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.006,
+        "ci_low": -0.008,
+        "ci_high": 0.02,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.048,
+      "items_shift_ge_1_mark": 0
+    },
+    "lexical+cal|authored": {
+      "MAE_clean": 0.64,
+      "MAE_ocr": 0.638,
+      "MAE_increase_from_OCR": {
+        "estimate": -0.002,
+        "ci_low": -0.036,
+        "ci_high": 0.035,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.113,
+      "items_shift_ge_1_mark": 0
+    },
+    "lexical+cal|auto": {
+      "MAE_clean": 0.668,
+      "MAE_ocr": 0.676,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.008,
+        "ci_low": -0.009,
+        "ci_high": 0.025,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.047,
+      "items_shift_ge_1_mark": 0
+    },
+    "teacher_mean_loqo|-": {
+      "MAE_clean": 0.66,
+      "MAE_ocr": 0.66,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "n_groups": 15,
+        "excludes_zero": false
+      },
+      "mean_abs_score_shift": 0.0,
+      "items_shift_ge_1_mark": 0
+    },
+    "length_loqo|-": {
+      "MAE_clean": 0.61,
+      "MAE_ocr": 0.701,
+      "MAE_increase_from_OCR": {
+        "estimate": 0.091,
+        "ci_low": 0.002,
+        "ci_high": 0.201,
+        "n_groups": 15,
+        "excludes_zero": true
+      },
+      "mean_abs_score_shift": 0.188,
+      "items_shift_ge_1_mark": 3
+    }
+  },
+  "student_short_totals": {
+    "teacher": {
+      "Student_11": 28.0,
+      "Student_23": 13.0,
+      "Student_34": 20.0,
+      "Student_35": 14.0,
+      "Student_50": 22.0
+    },
+    "const|authored|ocr": {
+      "Student_11": 14.0,
+      "Student_23": 12.0,
+      "Student_34": 10.0,
+      "Student_35": 11.0,
+      "Student_50": 15.0
+    },
+    "length|authored|ocr": {
+      "Student_11": 12.5,
+      "Student_23": 12.0,
+      "Student_34": 9.5,
+      "Student_35": 7.5,
+      "Student_50": 12.0
+    },
+    "tfidf|authored|ocr": {
+      "Student_11": 7.5,
+      "Student_23": 6.5,
+      "Student_34": 6.0,
+      "Student_35": 6.5,
+      "Student_50": 6.5
+    },
+    "lexical|authored|ocr": {
+      "Student_11": 13.0,
+      "Student_23": 14.0,
+      "Student_34": 10.0,
+      "Student_35": 10.0,
+      "Student_50": 8.0
+    },
+    "const+cal|authored|ocr": {
+      "Student_11": 22.4,
+      "Student_23": 17.9,
+      "Student_34": 16.3,
+      "Student_35": 17.9,
+      "Student_50": 22.4
+    },
+    "length+cal|authored|ocr": {
+      "Student_11": 22.6,
+      "Student_23": 19.3,
+      "Student_34": 16.4,
+      "Student_35": 16.5,
+      "Student_50": 22.0
+    },
+    "tfidf+cal|authored|ocr": {
+      "Student_11": 22.4,
+      "Student_23": 18.3,
+      "Student_34": 16.1,
+      "Student_35": 17.9,
+      "Student_50": 22.2
+    },
+    "lexical+cal|authored|ocr": {
+      "Student_11": 22.1,
+      "Student_23": 18.8,
+      "Student_34": 16.5,
+      "Student_35": 17.9,
+      "Student_50": 21.4
+    }
+  }
+}

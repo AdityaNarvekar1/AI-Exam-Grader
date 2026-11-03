@@ -1,0 +1,124 @@
+{
+  "hybrid_rule": "mean(baseline, embedding); if fact-check contradicted a point: min(baseline, embedding)",
+  "rows_where_fact_check_fired": 2,
+  "metrics": {
+    "overall": {
+      "baseline": {
+        "MAE": 1.271,
+        "RMSE": 1.822,
+        "pearson_r": 0.878,
+        "agreement_within_1_mark": 0.657,
+        "n": 70
+      },
+      "embedding": {
+        "MAE": 1.529,
+        "RMSE": 2.477,
+        "pearson_r": 0.806,
+        "agreement_within_1_mark": 0.557,
+        "n": 70
+      },
+      "hybrid": {
+        "MAE": 1.093,
+        "RMSE": 1.636,
+        "pearson_r": 0.905,
+        "agreement_within_1_mark": 0.729,
+        "n": 70
+      }
+    },
+    "normal": {
+      "baseline": {
+        "MAE": 1.05,
+        "RMSE": 1.39,
+        "pearson_r": 0.936,
+        "agreement_within_1_mark": 0.683,
+        "n": 60
+      },
+      "embedding": {
+        "MAE": 1.5,
+        "RMSE": 2.515,
+        "pearson_r": 0.81,
+        "agreement_within_1_mark": 0.583,
+        "n": 60
+      },
+      "hybrid": {
+        "MAE": 1.008,
+        "RMSE": 1.51,
+        "pearson_r": 0.923,
+        "agreement_within_1_mark": 0.75,
+        "n": 60
+      }
+    },
+    "adversarial_and_robustness": {
+      "baseline": {
+        "MAE": 2.6,
+        "RMSE": 3.413,
+        "pearson_r": 0.338,
+        "agreement_within_1_mark": 0.5,
+        "n": 10
+      },
+      "embedding": {
+        "MAE": 1.7,
+        "RMSE": 2.236,
+        "pearson_r": 0.773,
+        "agreement_within_1_mark": 0.4,
+        "n": 10
+      },
+      "hybrid": {
+        "MAE": 1.6,
+        "RMSE": 2.247,
+        "pearson_r": 0.795,
+        "agreement_within_1_mark": 0.6,
+        "n": 10
+      }
+    }
+  },
+  "bootstrap_mae_difference": {
+    "baseline_minus_hybrid (positive = hybrid better)": {
+      "mean_diff_in_MAE": 0.179,
+      "ci95": [
+        -0.121,
+        0.479
+      ],
+      "excludes_zero": false
+    },
+    "embedding_minus_hybrid (positive = hybrid better)": {
+      "mean_diff_in_MAE": 0.436,
+      "ci95": [
+        0.15,
+        0.75
+      ],
+      "excludes_zero": true
+    },
+    "embedding_minus_baseline (positive = baseline better)": {
+      "mean_diff_in_MAE": 0.257,
+      "ci95": [
+        -0.243,
+        0.75
+      ],
+      "excludes_zero": false
+    }
+  },
+  "confidence_informativeness": {
+    "baseline": {
+      "spearman_conf_vs_neg_error": 0.438,
+      "p_value": 0.0001
+    },
+    "embedding": {
+      "spearman_conf_vs_neg_error": -0.151,
+      "p_value": 0.2108
+    },
+    "hybrid_agreement": {
+      "spearman_conf_vs_neg_error": 0.593,
+      "p_value": 0.0
+    }
+  },
+  "review_flag": {
+    "threshold": 0.7,
+    "flagged": 27,
+    "of": 70,
+    "fraction_flagged": 0.386,
+    "hybrid_MAE_flagged": 1.593,
+    "hybrid_MAE_not_flagged": 0.779,
+    "note": "threshold chosen after viewing these rows - these two MAEs are in-sample"
+  }
+}

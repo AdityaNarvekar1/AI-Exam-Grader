@@ -1,0 +1,9 @@
+{
+  "n_train": 45,
+  "n_test": 20,
+  "MAE": 1.55,
+  "RMSE": 2.82,
+  "pearson_r": 0.719,
+  "pearson_p_value": 0.0003,
+  "agreement_within_1_mark": 0.65
+}

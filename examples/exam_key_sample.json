@@ -1,0 +1,170 @@
+{
+  "Q1": {
+    "question": "Explain the difference between a stack and a queue, with real-world examples.",
+    "reference_answer": "A stack follows Last-In-First-Out (LIFO) order, where the most recently added element is removed first, like a stack of plates. A queue follows First-In-First-Out (FIFO) order, where the earliest added element is removed first, like a queue of people waiting in line.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "A stack follows a last-in-first-out order, and a correct real-world example is given",
+        "marks": 2.5,
+        "binding": {
+          "subject_terms": [
+            "stack"
+          ],
+          "correct_value_terms": [
+            "last-in-first-out",
+            "last in first out",
+            "lifo"
+          ],
+          "contradicting_value_terms": [
+            "first-in-first-out",
+            "first in first out",
+            "fifo"
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "text": "A queue follows a first-in-first-out order, and a correct real-world example is given",
+        "marks": 2.5,
+        "binding": {
+          "subject_terms": [
+            "queue"
+          ],
+          "correct_value_terms": [
+            "first-in-first-out",
+            "first in first out",
+            "fifo"
+          ],
+          "contradicting_value_terms": [
+            "last-in-first-out",
+            "last in first out",
+            "lifo"
+          ]
+        }
+      }
+    ],
+    "maximum_score": 5
+  },
+  "Q2": {
+    "question": "Explain the key differences between a list and a tuple in Python.",
+    "reference_answer": "A list is mutable, meaning its elements can be changed, added, or removed after creation, whereas a tuple is immutable and cannot be modified once created. Lists are defined with square brackets and tuples with parentheses. Because tuples are immutable, they are generally faster to iterate over and can be used as dictionary keys or set elements, while lists cannot.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "A list is mutable, meaning it can be changed after creation, while a tuple is immutable and cannot be changed",
+        "marks": 2,
+        "binding": {
+          "subject_terms": [
+            "list"
+          ],
+          "correct_value_terms": [
+            "mutable"
+          ],
+          "contradicting_value_terms": [
+            "immutable"
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "text": "Lists are written using square brackets, while tuples are written using parentheses",
+        "marks": 1
+      },
+      {
+        "id": "p3",
+        "text": "Tuples are faster and hashable, so they can be used as dictionary keys, unlike lists",
+        "marks": 2
+      }
+    ],
+    "maximum_score": 5
+  },
+  "Q3": {
+    "question": "Differentiate between Type I and Type II errors in hypothesis testing.",
+    "reference_answer": "A Type I error occurs when the null hypothesis is rejected even though it is actually true (a false positive), and its probability is denoted by alpha, the significance level. A Type II error occurs when the null hypothesis is not rejected even though it is actually false (a false negative), and its probability is denoted by beta.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "A Type I error occurs when a true null hypothesis is incorrectly rejected, which is a false positive with probability alpha",
+        "marks": 2.5,
+        "binding": {
+          "subject_terms": [
+            "type i",
+            "type 1"
+          ],
+          "correct_value_terms": [
+            "false positive"
+          ],
+          "contradicting_value_terms": [
+            "false negative"
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "text": "A Type II error occurs when a false null hypothesis is not rejected, which is a false negative with probability beta",
+        "marks": 2.5,
+        "binding": {
+          "subject_terms": [
+            "type ii",
+            "type 2"
+          ],
+          "correct_value_terms": [
+            "false negative"
+          ],
+          "contradicting_value_terms": [
+            "false positive"
+          ]
+        }
+      }
+    ],
+    "maximum_score": 5
+  },
+  "Q4": {
+    "question": "Explain the bias-variance tradeoff.",
+    "reference_answer": "Bias is the error introduced by approximating a real-world problem with a simplified model, and high bias causes underfitting. Variance is the error introduced by the model's sensitivity to small fluctuations in the training data, and high variance causes overfitting. The bias-variance tradeoff refers to the fact that decreasing bias (using a more complex model) typically increases variance, and vice versa, so the goal is to find a model complexity that minimizes total error, which is the sum of bias-squared, variance, and irreducible error.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "Bias is defined as the error from an overly simple model, which leads to underfitting",
+        "marks": 2.5
+      },
+      {
+        "id": "p2",
+        "text": "Variance is defined as the error from a model that is too sensitive to the training data, which leads to overfitting",
+        "marks": 2.5
+      },
+      {
+        "id": "p3",
+        "text": "There is a tradeoff between bias and variance, where reducing one tends to increase the other",
+        "marks": 3,
+        "cues": {
+          "confirming_phrases": [
+            "tradeoff",
+            "trade off",
+            "trade-off",
+            "inversely",
+            "one increases",
+            "one decreases",
+            "reducing one"
+          ],
+          "contradicting_phrases": [
+            "always happen together",
+            "increase together",
+            "both increase",
+            "both get worse",
+            "happen together",
+            "both go up",
+            "both go down"
+          ]
+        }
+      },
+      {
+        "id": "p4",
+        "text": "The goal is to choose a model complexity that minimizes the total error by balancing bias and variance",
+        "marks": 2
+      }
+    ],
+    "maximum_score": 10
+  }
+}

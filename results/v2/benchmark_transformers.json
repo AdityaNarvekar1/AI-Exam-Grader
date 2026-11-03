@@ -1,0 +1,77 @@
+{
+  "A": {
+    "tfidf": {
+      "n": 70,
+      "MAE": 1.271,
+      "MAE_ci95_cluster_bootstrap": {
+        "ci_low": 1.043,
+        "ci_high": 1.507
+      },
+      "nMAE_pct_of_max": 15.71,
+      "QWK": 0.817,
+      "pearson_r": 0.878,
+      "spearman_rho": 0.886
+    },
+    "lexical": {
+      "n": 70,
+      "MAE": 1.129,
+      "MAE_ci95_cluster_bootstrap": {
+        "ci_low": 0.681,
+        "ci_high": 1.645
+      },
+      "nMAE_pct_of_max": 13.29,
+      "QWK": 0.808,
+      "pearson_r": 0.818,
+      "spearman_rho": 0.84
+    },
+    "bi": {
+      "n": 70,
+      "MAE": 1.007,
+      "MAE_ci95_cluster_bootstrap": {
+        "ci_low": 0.636,
+        "ci_high": 1.421
+      },
+      "nMAE_pct_of_max": 11.5,
+      "QWK": 0.845,
+      "pearson_r": 0.837,
+      "spearman_rho": 0.834
+    },
+    "nli": {
+      "n": 70,
+      "MAE": 0.9,
+      "MAE_ci95_cluster_bootstrap": {
+        "ci_low": 0.551,
+        "ci_high": 1.277
+      },
+      "nMAE_pct_of_max": 10.5,
+      "QWK": 0.882,
+      "pearson_r": 0.886,
+      "spearman_rho": 0.875
+    },
+    "nli_bi": {
+      "n": 70,
+      "MAE": 1.036,
+      "MAE_ci95_cluster_bootstrap": {
+        "ci_low": 0.657,
+        "ci_high": 1.449
+      },
+      "nMAE_pct_of_max": 12.36,
+      "QWK": 0.834,
+      "pearson_r": 0.843,
+      "spearman_rho": 0.836
+    },
+    "nli_bi_exp": {
+      "n": 70,
+      "MAE": 1.229,
+      "MAE_ci95_cluster_bootstrap": {
+        "ci_low": 0.97,
+        "ci_high": 1.521
+      },
+      "nMAE_pct_of_max": 15.0,
+      "QWK": 0.845,
+      "pearson_r": 0.862,
+      "spearman_rho": 0.846
+    }
+  },
+  "note": "Protocol A only, parsed from logs/bench_transformers.log; B and C were stopped for time on CPU. Rerun run_benchmark.py --tag transformers for B/C."
+}

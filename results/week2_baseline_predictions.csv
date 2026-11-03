@@ -1,0 +1,21 @@
+qid,subject,student_id,quality_tier,max_marks,human_score,predicted_score,abs_error,tfidf_similarity,keyword_overlap,confidence,feedback
+ST01,Probability & Statistics,S2003,paraphrase_trap,10,9.5,1.5,8.0,0.119,0.108,0.99,Answer shows little to no overlap with the reference answer/rubric.
+DB02,Database Management Systems,S2004,keyword_stuffing,10,1.0,7.5,6.5,0.606,0.27,0.66,Answer covers some key points but is missing important concepts from the reference answer.
+ML02,Machine Learning,S2002,keyword_stuffing,10,1.5,6.0,4.5,0.504,0.241,0.74,Answer covers some key points but is missing important concepts from the reference answer.
+DS02,Data Structures & Algorithms,S2005,paraphrase_trap,10,9.0,4.5,4.5,0.321,0.293,0.97,Answer only partially overlaps with the expected content; most key concepts are missing.
+DB01,Database Management Systems,S1038,good,10,8.0,5.5,2.5,0.41,0.302,0.89,Answer covers some key points but is missing important concepts from the reference answer.
+PY02,Python Programming,S1006,good,5,4.0,2.5,1.5,0.404,0.286,0.88,Answer only partially overlaps with the expected content; most key concepts are missing.
+PY01,Python Programming,S2001,paraphrase_trap,5,2.5,1.0,1.5,0.229,0.103,0.87,Answer shows little to no overlap with the reference answer/rubric.
+DS03,Data Structures & Algorithms,S1059,weak,10,1.5,2.5,1.0,0.229,0.095,0.87,Answer shows little to no overlap with the reference answer/rubric.
+ST02,Probability & Statistics,S1017,excellent,5,4.5,5.0,0.5,0.69,0.632,0.94,Answer closely matches the reference answer in content and vocabulary.
+ML01,Machine Learning,S1028,poor,10,0.0,0.5,0.5,0.056,0.051,1.0,Answer shows little to no overlap with the reference answer/rubric.
+PY01,Python Programming,S1001,excellent,5,5.0,5.0,0.0,0.691,0.552,0.86,Answer closely matches the reference answer in content and vocabulary.
+PY03,Python Programming,S1009,excellent,10,10.0,10.0,0.0,0.743,0.619,0.88,Answer closely matches the reference answer in content and vocabulary.
+ST01,Probability & Statistics,S1016,poor,10,0.0,0.0,0.0,0.015,0.0,0.99,Answer shows little to no overlap with the reference answer/rubric.
+ST03,Probability & Statistics,S1021,excellent,5,5.0,5.0,0.0,0.723,0.686,0.96,Answer closely matches the reference answer in content and vocabulary.
+ML02,Machine Learning,S1031,weak,10,0.5,0.5,0.0,0.078,0.037,0.96,Answer shows little to no overlap with the reference answer/rubric.
+ML03,Machine Learning,S1036,poor,10,0.0,0.0,0.0,0.02,0.0,0.98,Answer shows little to no overlap with the reference answer/rubric.
+DB02,Database Management Systems,S1041,excellent,10,10.0,10.0,0.0,0.856,0.73,0.87,Answer closely matches the reference answer in content and vocabulary.
+DB03,Database Management Systems,S1045,excellent,10,9.5,9.5,0.0,0.617,0.55,0.93,Answer closely matches the reference answer in content and vocabulary.
+DS01,Data Structures & Algorithms,S1051,weak,5,0.0,0.0,0.0,0.0,0.0,1.0,Answer shows little to no overlap with the reference answer/rubric.
+DS02,Data Structures & Algorithms,S1053,excellent,10,10.0,10.0,0.0,0.878,0.756,0.88,Answer closely matches the reference answer in content and vocabulary.

@@ -1,0 +1,30 @@
+{
+  "legacy": {
+    "tp": 5,
+    "fp": 3,
+    "fn": 3,
+    "tn": 54,
+    "fp_cases": [
+      "ST02/excellent/p1",
+      "ST02/terse_correct/p1",
+      "ST02/all_caps/p1"
+    ],
+    "fn_cases": [
+      "PY01/error_variant/p1",
+      "ST02/error_variant/p1",
+      "ST02/error_variant/p2"
+    ],
+    "precision": 0.625,
+    "recall": 0.625
+  },
+  "v2": {
+    "tp": 8,
+    "fp": 0,
+    "fn": 0,
+    "tn": 57,
+    "fp_cases": [],
+    "fn_cases": [],
+    "precision": 1.0,
+    "recall": 1.0
+  }
+}

@@ -1,0 +1,31 @@
+[Q21] Define Supervised Learning.
+   WARN  FRAGMENT                   p2       Looks like a fragment. Write a full assertable sentence ('A list is mutable ...'), not a topic label - fragments made decisions flip in Week 6.
+[Q22] Evaluation Case Study: A model (M1) achieves 99% accuracy on the training set but only 30% accuracy on the testing set. What is happening to this model?
+   WARN  NOT_SUPPORTED_BY_REFERENCE p1       Less than half of this point's content words occur in the reference answer; rubric and reference may disagree.
+[Q23] What is Regression Analysis?
+   WARN  FRAGMENT                   p2       Looks like a fragment. Write a full assertable sentence ('A list is mutable ...'), not a topic label - fragments made decisions flip in Week 6.
+[Q24] List and elucidate two major challenges in Machine Learning.
+   WARN  NOT_SUPPORTED_BY_REFERENCE p1       Less than half of this point's content words occur in the reference answer; rubric and reference may disagree.
+   WARN  NOT_SUPPORTED_BY_REFERENCE p2       Less than half of this point's content words occur in the reference answer; rubric and reference may disagree.
+[Q25] List any two major real-world applications of Data Science.
+   WARN  NOT_SUPPORTED_BY_REFERENCE p1       Less than half of this point's content words occur in the reference answer; rubric and reference may disagree.
+[Q26] Distinguish between Structured and Semi-structured data.  OK
+[Q27] Describe methods used to detect and handle outliers in a dataset.
+   WARN  NOT_SUPPORTED_BY_REFERENCE p2       Less than half of this point's content words occur in the reference answer; rubric and reference may disagree.
+[Q28] What is Data Pre-processing?
+   WARN  FRAGMENT                   p2       Looks like a fragment. Write a full assertable sentence ('A list is mutable ...'), not a topic label - fragments made decisions flip in Week 6.
+[Q29] Why is Data Normalization required for the K-Nearest Neighbors (K-NN) algorithm?
+   WARN  NOT_SUPPORTED_BY_REFERENCE p1       Less than half of this point's content words occur in the reference answer; rubric and reference may disagree.
+   WARN  FRAGMENT                   p2       Looks like a fragment. Write a full assertable sentence ('A list is mutable ...'), not a topic label - fragments made decisions flip in Week 6.
+[Q30] How are continuous attributes discretized? Give an example.  OK
+[Q31] What does the 'K' represent in the K-Means clustering algorithm?
+   WARN  NOT_SUPPORTED_BY_REFERENCE p2       Less than half of this point's content words occur in the reference answer; rubric and reference may disagree.
+[Q32] Name three common Hyperparameters in Machine Learning algorithms.  OK
+[Q33] Define Gradient Descent.
+   WARN  FRAGMENT                   p2       Looks like a fragment. Write a full assertable sentence ('A list is mutable ...'), not a topic label - fragments made decisions flip in Week 6.
+[Q34] Classifier Comparison: Compare three SVM classifiers based on their margins and boundaries.
+   WARN  NOT_SUPPORTED_BY_REFERENCE p1       Less than half of this point's content words occur in the reference answer; rubric and reference may disagree.
+[Q35] Explain how the Radial Basis Function (RBF) Kernel works in SVM.
+   WARN  FRAGMENT                   p1       Looks like a fragment. Write a full assertable sentence ('A list is mutable ...'), not a topic label - fragments made decisions flip in Week 6.
+   WARN  FRAGMENT                   p2       Looks like a fragment. Write a full assertable sentence ('A list is mutable ...'), not a topic label - fragments made decisions flip in Week 6.
+TOTAL: {'ERROR': 0, 'WARN': 15, 'INFO': 0}

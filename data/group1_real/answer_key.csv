@@ -1,0 +1,36 @@
+﻿question,question_type,question_text,correct_answer
+Q1,mcq,Which of the following is an assumption of Linear Regression?,B
+Q2,mcq,"In a perfectly fitted regression model, the sum of residuals (errors) should be:",C
+Q3,mcq,Which distance metric is specifically used for categorical variables or strings of equal length?,A
+Q4,mcq,Supervised learning can be split into which two main categories?,C
+Q5,mcq,Which of the following is an ensemble learning method based on decision trees?,B
+Q6,mcq,"The process of combining multiple classifiers to improve prediction (e.g., Bagging or Boosting) is called:",A
+Q7,mcq,"In a Confusion Matrix, what is the value of the error for a perfect classifier?",A
+Q8,mcq,Which visualization tool is most effective for identifying correlations between two continuous variables?,C
+Q9,mcq,"In a scatter plot, individual data observations are represented as:",A
+Q10,mcq,Which measure of central tendency is most sensitive to outliers?,B
+Q11,mcq,"In regression analysis, the output (dependent variable) is typically:",B
+Q12,mcq,The process of identifying the most relevant variables to use in a model is known as:,C
+Q13,mcq,Which technique is used to predict a continuous numerical value?,B
+Q14,mcq,Analysis that involves data points collected or recorded at specific time intervals is called:,C
+Q15,mcq,Which of the following is actually a classification algorithm despite its name?,B
+Q16,mcq,Hyperparameters are best described as:,C
+Q17,mcq,(True/False): Logistic regression is used for predicting continuous outcomes.,B
+Q18,mcq,"In a confusion matrix, where are the ""Correct Predictions"" located?",C
+Q19,mcq,What is the formula for Precision?,B
+Q20,mcq,"In Support Vector Machines (SVM), the data points closest to the hyperplane that help define the margin are called:",B
+Q21,short,Define Supervised Learning.,A type of ML where the model is trained on labeled data with known inputs and outputs.
+Q22,short,Evaluation Case Study: A model (M1) achieves 99% accuracy on the training set but only 30% accuracy on the testing set. What is happening to this model?,Overfitting; the model has memorized the training data but failed to generalize.
+Q23,short,What is Regression Analysis?,A statistical process for estimating the relationships between a dependent variable and one or more independent variables.
+Q24,short,List and elucidate two major challenges in Machine Learning.,"Data quality/missing values, overfitting/underfitting, data collection, or time consumption."
+Q25,short,List any two major real-world applications of Data Science.,"Healthcare/disease prediction, Finance/fraud detection, E-commerce recommendation systems."
+Q26,short,Distinguish between Structured and Semi-structured data.,"Structured is organized in rows/columns (SQL, Excel); Semi-structured has some markers but isn't in a grid (JSON, XML, HTML)."
+Q27,short,Describe methods used to detect and handle outliers in a dataset.,"Detection: Z-score, IQR, Scatter plots, Box plots. Handling: Trimming, Capping, or Imputation."
+Q28,short,What is Data Pre-processing?,The steps taken to clean and transform raw data into a format suitable for a machine learning model.
+Q29,short,Why is Data Normalization required for the K-Nearest Neighbors (K-NN) algorithm?,K-NN is distance-based; features with larger scales will dominate the distance calculation if not normalized.
+Q30,short,How are continuous attributes discretized? Give an example.,"By grouping values into bins or intervals, e.g., turning ages 1-100 into 'Child,' 'Adult,' 'Senior.'"
+Q31,short,What does the 'K' represent in the K-Means clustering algorithm?,The predefined number of clusters or groups the data will be divided into.
+Q32,short,Name three common Hyperparameters in Machine Learning algorithms.,"K in K-NN, Learning Rate, Number of Estimators/Trees, Max Depth, or Batch Size."
+Q33,short,Define Gradient Descent.,An optimization algorithm used to minimize the cost function by iteratively moving toward the steepest descent.
+Q34,short,Classifier Comparison: Compare three SVM classifiers based on their margins and boundaries.,Discussion on maximizing the margin and ensuring no data points fall within the 'gutter' or margin.
+Q35,short,Explain how the Radial Basis Function (RBF) Kernel works in SVM.,It transforms data into a higher-dimensional space to find a non-linear decision boundary.

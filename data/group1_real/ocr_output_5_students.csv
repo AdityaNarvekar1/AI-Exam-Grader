@@ -1,0 +1,176 @@
+﻿student_id,question,question_type,ocr_answer,status,confidence,needs_review,page,placed_by_content
+Student_11,Q1,mcq,D,found,0.729,no,1,no
+Student_11,Q2,mcq,C,found,1.0,no,1,no
+Student_11,Q3,mcq,D,found,1.0,no,1,no
+Student_11,Q4,mcq,D,found,1.0,no,1,no
+Student_11,Q5,mcq,A,found,0.997,no,1,no
+Student_11,Q6,mcq,B,found,1.0,no,1,no
+Student_11,Q7,mcq,B,found,1.0,no,1,no
+Student_11,Q8,mcq,D,found,1.0,no,1,no
+Student_11,Q9,mcq,D,found,1.0,no,1,no
+Student_11,Q10,mcq,B,found,1.0,no,1,no
+Student_11,Q11,mcq,B,found,1.0,no,1,no
+Student_11,Q12,mcq,C,found,1.0,no,1,no
+Student_11,Q13,mcq,B,found,1.0,no,1,no
+Student_11,Q14,mcq,C,found,1.0,no,1,no
+Student_11,Q15,mcq,B,found,1.0,no,1,no
+Student_11,Q16,mcq,B,found,1.0,no,1,no
+Student_11,Q17,mcq,B,found,1.0,no,1,no
+Student_11,Q18,mcq,C,found,1.0,no,2,no
+Student_11,Q19,mcq,A,found,0.999,no,2,no
+Student_11,Q20,mcq,B,found,1.0,no,2,no
+Student_11,Q21,short,Supervised Learning is a type of machine - - that are used to train and predict data that are labeled.,found,0.884,no,2,no
+Student_11,Q22,short,"Model M1 is not a good model, despite being able to get a 99% accuracy for train dataset it still fails at the testing dataset. This can occur to certain reasons: - Lack of Dataset - Badification Selection - Too many outliers - No feature Engineering.",found,0.946,no,2,no
+Student_11,Q23,short,Regression Analysis is the monitoring of the relationship between variable: with the to understand value.,found,0.774,no,5,no
+Student_11,Q24,short,"2 challenges of Machine Learning: - Today, This is a major problem, even with The best ML Algorithms with bad data the output would also be bad.",found,0.921,no,5,no
+Student_11,Q25,short,2 major applications of data Science: - Heart-Failure Prediction Classifying of Tumor is Dormant or Malignant.,found,0.895,no,2,no
+Student_11,Q26,short,"Structured Data: Semi-Structured Data - Are in tabular format - Not in tabular format - Has all features that - Has features call mixed builds up conclusion - format of Excel, CSV ---format of Image, Video, sound",found,0.801,no,6,no
+Student_11,Q27,short,"To find the outlier in the Data we could perform a standard deviation by using the mean as a middle point to determine which data is furthest, the fact for the set are the outliers.",found,0.907,no,3,no
+Student_11,Q28,short,"Data pre-processing is a stage in the data science life-cycle. During this stage is where we prepare the dataset in order to feed it to the model for H training and Testing. In this stage, we perform: - handling miss value - Outlier Detection - Feature Selection - Feature Engineering 0. 2.",found,0.882,yes,3,yes
+Student_11,Q29,short,"Data normalization is required in K-NN, because we need to divide the dataset into class or group that has similar property. This will allow the K-NN model to precisely train with table labeled data and make better prediction. - mean 3rd h",found,0.88,no,3,no
+Student_11,Q30,short,Continuous Attributes are discretized by calculating the mean of the Attribute and - normal the distance from one another.,found,0.859,no,6,no
+Student_11,Q31,short,K in K-means algorithms refers to the number of clusters that we will use to divide the dataset into when fitting the model.,found,0.884,no,4,no
+Student_11,Q32,short,A few hyperparameters of ML Algorithms: - N-estimators - mean - media - neighbors K-incline of clusters - Train-Test set ratio,found,0.797,no,4,no
+Student_11,Q33,short,"Cradient Descent is the derivative value of the dependent variable, where it alters the final output of every calculation with SVM.",found,0.911,no,6,no
+Student_11,Q34,short,,not_found,,yes,,
+Student_11,Q35,short,Radial Basis Function Kemel work in SUM by - any and comparing the distance of the data from the linear boundaries.,found,0.822,no,6,no
+Student_23,Q1,mcq,A,found,1.0,no,1,no
+Student_23,Q2,mcq,C,found,1.0,no,1,no
+Student_23,Q3,mcq,A,found,1.0,no,1,no
+Student_23,Q4,mcq,C,found,1.0,no,1,no
+Student_23,Q5,mcq,B,found,1.0,no,1,no
+Student_23,Q6,mcq,D,found,1.0,no,1,no
+Student_23,Q7,mcq,B,found,1.0,no,1,no
+Student_23,Q8,mcq,A,found,1.0,no,1,no
+Student_23,Q9,mcq,D,found,1.0,no,1,no
+Student_23,Q10,mcq,B,found,1.0,no,1,no
+Student_23,Q11,mcq,B,found,1.0,no,1,no
+Student_23,Q12,mcq,C,found,1.0,no,1,no
+Student_23,Q13,mcq,B,found,1.0,no,1,no
+Student_23,Q14,mcq,C,found,1.0,no,1,no
+Student_23,Q15,mcq,C,found,1.0,no,1,no
+Student_23,Q16,mcq,C,found,1.0,no,1,no
+Student_23,Q17,mcq,A,found,1.0,no,1,no
+Student_23,Q18,mcq,D,found,1.0,no,1,no
+Student_23,Q19,mcq,A,found,1.0,no,2,no
+Student_23,Q20,mcq,D,found,0.876,no,2,no
+Student_23,Q21,short,Supervised learning is a process providing the Input data as well as the correct outful data to the Training data set in machine Learning model.,found,0.866,no,2,no
+Student_23,Q22,short,A model M1 G1ve 99% of accuracy for learning dataset and give 30% of accuracy for testing dataset. when the Training data set the machine applike the machine learning al problems and it make the accuracy of training data set is 99% when doing the data testing there is not yet applied the machine Learning algorithm that why in testing data have only 30% of accuracy.,found,0.865,yes,4,yes
+Student_23,Q23,short,"Regression analysis is a machine learning technique use to predict the desired value in the dataset. LHDB:L000,hospital",found,0.739,no,2,no
+Student_23,Q24,short,Two challenges of Machine Learning: - Hard to collecting the dataset and use the data to do the processing and make the data cleansing. challenges to manage the dataset in this is learning process. - Can't give the 100% correct output and have a problem to analyze the output.,found,0.864,no,2,no
+Student_23,Q25,short,"List out any two major applications of data science Distinctured applications: help to analyze the health car system. - Finance application, help in the Finance system.",found,0.817,no,2,no
+Student_23,Q26,short,Distinguish between the terms: structure data and Semi-structure data structuredata: data with a high degrees of organization and easy to understand 4 Semi-Structured data: Data with some degrees of organizational.,found,0.893,no,2,no
+Student_23,Q27,short,to find Outlier in the data we need to do the processing using outlier in machine learning algorithm: - Continuous Detect the data in the data set. - Implications find the outlier data in dataset.,found,0.757,no,4,no
+Student_23,Q28,short,"Data pre-processing is a process we are collecting the data, Prepare data in the dataset, Prepare the dataset for the data training in Machine Learning algorithm",found,0.911,yes,3,yes
+Student_23,Q29,short,Data normalization is required in K-NN because in Data normalization need K-NN algorithm to do the process in data normalization and it help Data:international to make the data easy to do the process.,found,0.873,no,3,no
+Student_23,Q30,short,The cutaneous attributes are described is because the value of the data in the dataset are in the Quantities data and in an and all the data are an idea in the number.,found,0.703,no,4,no
+Student_23,Q31,short,"K in K-means loading mean the number of cluster If K--2, it mean have 2 cluster, If K-3 it mean it has 3 Cluster, and SON2:",found,0.695,no,3,no
+Student_23,Q32,short,"Name few hyperparameters of machine learning algorithm - Nearest Neighbor - Naive Baye - KNN - Linear regression, support vector machine ( SVM ) - Nuoral Networks - K-mean- Clustering - Association Rules - Q- Learning. -Temporal difference ( TO ).",found,0.862,no,3,no
+Student_23,Q33,short,,not_found,,yes,,
+Student_23,Q34,short,,not_found,,yes,,
+Student_23,Q35,short,,not_found,,yes,,
+Student_34,Q1,mcq,D,found,1.0,no,1,no
+Student_34,Q2,mcq,C,found,1.0,no,1,no
+Student_34,Q3,mcq,A,found,0.975,no,1,no
+Student_34,Q4,mcq,D,found,1.0,no,1,no
+Student_34,Q5,mcq,A,found,0.995,no,1,no
+Student_34,Q6,mcq,B,found,1.0,no,1,no
+Student_34,Q7,mcq,B,found,1.0,no,1,no
+Student_34,Q8,mcq,D,found,1.0,no,1,no
+Student_34,Q9,mcq,D,found,1.0,no,1,no
+Student_34,Q10,mcq,B,found,0.961,no,1,no
+Student_34,Q11,mcq,B,found,1.0,no,1,no
+Student_34,Q12,mcq,C,found,1.0,no,1,no
+Student_34,Q13,mcq,B,found,1.0,no,1,no
+Student_34,Q14,mcq,C,found,0.957,no,1,no
+Student_34,Q15,mcq,B,found,0.997,no,1,no
+Student_34,Q16,mcq,C,found,1.0,no,1,no
+Student_34,Q17,mcq,A,found,0.986,no,1,no
+Student_34,Q18,mcq,C,found,0.999,no,1,no
+Student_34,Q19,mcq,B,found,1.0,no,2,no
+Student_34,Q20,mcq,B,found,0.996,no,2,no
+Student_34,Q21,short,- quant amaning is used for quantiation based on Labelled training data. The algorithm learn a function from the input normalization ( to the output variables ( Target ).,found,0.681,no,2,no
+Student_34,Q22,short,,not_found,,yes,,
+Student_34,Q23,short,Regression analysis is an analysis that used for numerous problem. It predicts the value of a variable based on the value of the other variables. page of 19.9 B. 20. Reg.B.,found,0.566,yes,2,no
+Student_34,Q24,short,two challenges of machine learning: - Data proportional real life data is messy need a lot of cleaning. - Data Security and primary,found,0.902,no,4,no
+Student_34,Q25,short,List two major application of data science: - Healthcare - bank,found,0.947,no,2,no
+Student_34,Q26,short,"Biological between the term structured and semi- Structured data: Structured data: is the data with high organization Example: CSV file, spread sheet file - Semi-structured data: is the data with some organization. Example: HTML file, XML file.",found,0.912,no,2,no
+Student_34,Q27,short,,not_found,,yes,,
+Student_34,Q28,short,Data pre-processing is a process that take raw data and the format it into a format that can be analyze and understood by a computer.,found,0.921,no,4,no
+Student_34,Q29,short,Data normalization is required in KNN because data normalization is a process of value of variable is the value between 0 and 1. data normalization allow the correctization the data that has difference unit or scale in KNN.,found,0.876,no,3,no
+Student_34,Q30,short,The continous attributes are discretized by Convert them using one-hot unacting or use cleaning technique.,found,0.857,no,3,no
+Student_34,Q31,short,K man algorithm is an idealization that tries to partition the dataset into K pre decimal distinct non-overlapping ( cluster ) where each data point belong to only one group. Name few hyperparameters: - Linear kenel - polynomial kernel - Radial Kernel.,found,0.895,no,4,no
+Student_34,Q32,short,,not_found,,yes,,
+Student_34,Q33,short,,not_found,,yes,,
+Student_34,Q34,short,"Comment the performance of the classifiers: Represent them as A,B and C in order: - Classifiers A is the best case: the hyperphoned experate the data into two classes correctly. The distance between the hyperplasia also great because they are far enough from each other. classifiers b is the worst case. the typical. does not separate the data dobject well since there are some remaining data in between the hyperplanes: Classifier C is good but not the best: the hyperplanes supervile the data1 object well but the distance between hyperplanes is too short.",found,0.839,no,3,no
+Student_34,Q35,short,,not_found,,yes,,
+Student_35,Q1,mcq,A,found,1.0,no,1,no
+Student_35,Q2,mcq,C,found,1.0,no,1,no
+Student_35,Q3,mcq,B,found,1.0,no,1,no
+Student_35,Q4,mcq,C,found,1.0,no,1,no
+Student_35,Q5,mcq,B,found,1.0,no,1,no
+Student_35,Q6,mcq,B,found,1.0,no,1,no
+Student_35,Q7,mcq,A,found,1.0,no,1,no
+Student_35,Q8,mcq,D,found,1.0,no,1,no
+Student_35,Q9,mcq,D,found,1.0,no,1,no
+Student_35,Q10,mcq,B,found,1.0,no,1,no
+Student_35,Q11,mcq,C,found,1.0,no,1,no
+Student_35,Q12,mcq,B,found,1.0,no,1,no
+Student_35,Q13,mcq,B,found,0.994,no,1,no
+Student_35,Q14,mcq,C,found,1.0,no,1,no
+Student_35,Q15,mcq,C,found,1.0,no,1,no
+Student_35,Q16,mcq,C,found,1.0,no,1,no
+Student_35,Q17,mcq,A,found,1.0,no,1,no
+Student_35,Q18,mcq,C,found,0.969,no,1,no
+Student_35,Q19,mcq,B,found,1.0,no,1,no
+Student_35,Q20,mcq,C,found,1.0,no,1,no
+Student_35,Q21,short,Supervised Learning is a technique that we used data that trained for training dataset and for testing dataset.,found,0.967,yes,2,yes
+Student_35,Q22,short,Comment on model M1: model M1 gives 99% of accuracy for training dataset it means the number of accuracy of M1 model has high percentage of successful.Model River 30% of accuracy for testing dataset it means Mr model for testing is not enough to be come a good model and need more of training.,found,0.908,no,2,no
+Student_35,Q23,short,Regression analysis is a process of analysing set of data to enhance training dataset and testing data set that which used Linear Regression.,found,0.964,yes,2,yes
+Student_35,Q24,short,Elucidate any two challenges of Machine learning. - model training. as it using 4: dataset for training so it needed us to train model to get more accuracy.,found,0.937,no,2,no
+Student_35,Q25,short,"List out any two major applications of data science: - Stock price prediction, 2. Number of Orders prediction",found,0.917,no,3,no
+Student_35,Q26,short,"Distinguish between terms: Structure and Semi-structured data: structured applications of applications data is not well organized data well organized - JSON Excel, Spreadsheet. Audio, music - - use for pre-making application, time and effort it any data and the purpose admin structured in a specific format that data. allow us to use for any out - I man take time if want purpose- purpose it as training dataset. - Easy to manage for training purposes",found,0.631,no,3,no
+Student_35,Q27,short,We find out over in the data by using visualization technique and calculate the distance.,found,0.924,yes,4,yes
+Student_35,Q28,short,Data pre-processing is the way of Converting raw data # into useful data for utilizing purposes.,found,0.876,no,4,no
+Student_35,Q29,short,Data normalization is required in K-NN because it has big data and need to minimize. in,found,0.795,no,4,no
+Student_35,Q30,short,,not_found,,yes,,
+Student_35,Q31,short,K in K-means algorithm is class.,found,0.86,no,4,no
+Student_35,Q32,short,,not_found,,yes,,
+Student_35,Q33,short,Gradient descent is an unsupervised learning for prediction data.,found,0.977,no,4,no
+Student_35,Q34,short,,not_found,,yes,,
+Student_35,Q35,short,,not_found,,yes,,
+Student_50,Q1,mcq,D,found,1.0,no,1,no
+Student_50,Q2,mcq,C,found,1.0,no,1,no
+Student_50,Q3,mcq,D,found,1.0,no,1,no
+Student_50,Q4,mcq,C,found,1.0,no,1,no
+Student_50,Q5,mcq,C,found,1.0,no,1,no
+Student_50,Q6,mcq,D,found,0.749,no,1,no
+Student_50,Q7,mcq,B,found,1.0,no,1,no
+Student_50,Q8,mcq,C,found,1.0,no,1,no
+Student_50,Q9,mcq,A,found,1.0,no,1,no
+Student_50,Q10,mcq,B,found,1.0,no,1,no
+Student_50,Q11,mcq,B,found,1.0,no,1,no
+Student_50,Q12,mcq,C,found,1.0,no,1,no
+Student_50,Q13,mcq,B,found,1.0,no,1,no
+Student_50,Q14,mcq,C,found,0.999,no,1,no
+Student_50,Q15,mcq,B,found,1.0,no,1,no
+Student_50,Q16,mcq,C,found,1.0,no,1,no
+Student_50,Q17,mcq,A,found,1.0,no,1,no
+Student_50,Q18,mcq,C,found,0.993,no,1,no
+Student_50,Q19,mcq,C,found,1.0,no,2,no
+Student_50,Q20,mcq,C,found,1.0,no,2,no
+Student_50,Q21,short,Supervised learning is a type of learning of Machine learning with the model learn with the label data. and the goal is to find the prediction or an output.,found,0.944,no,2,no
+Student_50,Q22,short,I think the model M1 will face the issue or error or fourth the area. 2. The Model train very accurate but when we test are well used that the Model is not accurate because of the dataset we use to test.,found,0.791,no,2,no
+Student_50,Q23,short,Regression analysis is the analysis that use use on Regression problem to find the relationship between value and the Variable.,found,0.93,no,3,no
+Student_50,Q24,short,Two challenges of Machine learning. - The accurate of Data set - The model are choose.,found,0.942,no,3,no
+Student_50,Q25,short,"Major application of NL. - Soft driving car production application like weather,",found,0.861,no,3,no
+Student_50,Q26,short,"Designjust between Structure and Semi-structured data. - Stature data. the datasin, a proper format now, column or table. - SON2-structure data - the data with a sliable and format but not in a row or column. Ex. XML,",found,0.746,no,2,no
+Student_50,Q27,short,We find out the Outlier in data by using the being the chart or algorithm to show the relationship between data. Example. SCatter plot. If it is different from other of is a outlier.,found,0.867,yes,3,yes
+Student_50,Q28,short,Data pre-processing is a state that we use to clean the data and transfer in the data to the accurate did usable data. we do handling the missing data or normalization,found,0.875,no,3,no
+Student_50,Q29,short,"We need data normalization in KNN since KNN we use to point data # into group with the closet data. If the data set is big the accurate of grouping or classification is low. So we use use data applications, It will help the model - more accurate.",found,0.849,no,4,no
+Student_50,Q30,short,Continuous attributes are discretied because the attributes where the data that we can bet denoted if,found,0.718,no,4,no
+Student_50,Q31,short,K in k-means algorithm is the number of cluster which we devided.,found,0.921,no,4,no
+Student_50,Q32,short,3 2nd year plan of machine learning. ed,found,0.662,no,4,no
+Student_50,Q33,short,-3. what is good at descent ? - Godient descent is a outlier point which is the data that is out of group.,found,0.824,no,4,no
+Student_50,Q34,short,Based on the Green Linear Learning the classification is more accurate when the distance of 2 line is a bit for. In SVM use can entense the distance of 2 pararel line to see if we really classify it accurately or not. So the performance of fast and third boundaries is accurate.,found,0.835,yes,5,yes
+Student_50,Q35,short,Radial Basis function kernel worth in SVM.,found,0.921,no,5,no

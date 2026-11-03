@@ -1,0 +1,91 @@
+{
+  "const": {
+    "n": 2273,
+    "MAE": 0.891,
+    "nMAE_pct_of_max": 17.81,
+    "RMSE": 1.098,
+    "pearson_r": -0.082,
+    "spearman_rho": -0.068,
+    "QWK": 0.0,
+    "within_10pct_of_max": 0.228,
+    "within_1_mark": 0.802,
+    "MAE_ci95_cluster_bootstrap": {
+      "estimate": 0.891,
+      "ci_low": 0.841,
+      "ci_high": 0.945,
+      "n_groups": 81
+    },
+    "MAE_diff_vs_refsim (+ = better)": {
+      "estimate": -0.19,
+      "ci_low": -0.245,
+      "ci_high": -0.137,
+      "n_groups": 81,
+      "excludes_zero": true
+    }
+  },
+  "length": {
+    "n": 2273,
+    "MAE": 0.892,
+    "nMAE_pct_of_max": 17.85,
+    "RMSE": 1.097,
+    "pearson_r": 0.045,
+    "spearman_rho": 0.006,
+    "QWK": 0.021,
+    "within_10pct_of_max": 0.228,
+    "within_1_mark": 0.752,
+    "MAE_ci95_cluster_bootstrap": {
+      "estimate": 0.892,
+      "ci_low": 0.84,
+      "ci_high": 0.948,
+      "n_groups": 81
+    },
+    "MAE_diff_vs_refsim (+ = better)": {
+      "estimate": -0.192,
+      "ci_low": -0.254,
+      "ci_high": -0.133,
+      "n_groups": 81,
+      "excludes_zero": true
+    }
+  },
+  "refsim": {
+    "n": 2273,
+    "MAE": 0.701,
+    "nMAE_pct_of_max": 14.02,
+    "RMSE": 0.962,
+    "pearson_r": 0.48,
+    "spearman_rho": 0.526,
+    "QWK": 0.365,
+    "within_10pct_of_max": 0.595,
+    "within_1_mark": 0.841,
+    "MAE_ci95_cluster_bootstrap": {
+      "estimate": 0.701,
+      "ci_low": 0.636,
+      "ci_high": 0.769,
+      "n_groups": 81
+    }
+  },
+  "lex": {
+    "n": 2273,
+    "MAE": 0.714,
+    "nMAE_pct_of_max": 14.27,
+    "RMSE": 0.958,
+    "pearson_r": 0.488,
+    "spearman_rho": 0.529,
+    "QWK": 0.367,
+    "within_10pct_of_max": 0.427,
+    "within_1_mark": 0.739,
+    "MAE_ci95_cluster_bootstrap": {
+      "estimate": 0.714,
+      "ci_low": 0.65,
+      "ci_high": 0.779,
+      "n_groups": 81
+    },
+    "MAE_diff_vs_refsim (+ = better)": {
+      "estimate": -0.013,
+      "ci_low": -0.035,
+      "ci_high": 0.01,
+      "n_groups": 81,
+      "excludes_zero": false
+    }
+  }
+}

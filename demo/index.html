@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Exam Answer Grader — Demo</title>
+<style>
+  :root {
+    --bg: #f5f7fa; --panel: #ffffff; --text: #1b2430; --muted: #5b6776; --line: #d9e0e8;
+    --navy: #1f3864; --accent: #2a6fdb; --ok: #1e7a3c; --ok-bg: #e6f4ea;
+    --warn: #8a5a00; --warn-bg: #fff3d6; --bad: #a12a2a; --bad-bg: #fde8e8; --code: #eef2f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f1722; --panel: #172233; --text: #e8edf3; --muted: #9fb0c3; --line: #2a3a50;
+            --navy: #9db8ee; --accent: #6aa3ff; --ok: #7bd491; --ok-bg: #16331f;
+            --warn: #f3c46b; --warn-bg: #3a2d10; --bad: #ff9c9c; --bad-bg: #3a1a1a; --code: #1d2b40; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+               font: 15px/1.5 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  header { padding: 20px 28px 0; }
+  h1 { margin: 0; font-size: 24px; color: var(--navy); }
+  .sub { margin: 4px 0 14px; color: var(--muted); font-size: 14px; }
+  nav { display: flex; gap: 6px; padding: 0 28px; border-bottom: 1px solid var(--line); }
+  nav button { background: none; border: 0; padding: 10px 16px; font: inherit; color: var(--muted);
+               cursor: pointer; border-bottom: 3px solid transparent; }
+  nav button[aria-selected="true"] { color: var(--navy); border-bottom-color: var(--accent); font-weight: 600; }
+  main { padding: 22px 28px 40px; max-width: 1280px; margin: 0 auto; }
+  .grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 22px; }
+  @media (max-width: 920px) { .grid { grid-template-columns: 1fr; } }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+  .panel h2 { margin: 0 0 12px; font-size: 16px; color: var(--navy); }
+  label { display: block; font-weight: 600; font-size: 13px; margin: 12px 0 4px; }
+  input[type=text], input[type=number], select, textarea {
+    width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px;
+    background: var(--panel); color: var(--text); font: inherit; }
+  textarea { resize: vertical; min-height: 70px; }
+  textarea.mono { font: 12.5px/1.45 ui-monospace, Menlo, Consolas, monospace; min-height: 190px; }
+  button.primary { background: var(--accent); color: #fff; border: 0; padding: 10px 20px; border-radius: 6px;
+                   font: inherit; font-weight: 600; cursor: pointer; margin-top: 14px; }
+  button.primary:disabled { opacity: .6; cursor: progress; }
+  button.small { background: var(--code); color: var(--text); border: 1px solid var(--line);
+                 padding: 4px 10px; border-radius: 5px; font: inherit; font-size: 13px; cursor: pointer; }
+  .rubric-row { display: grid; grid-template-columns: 1fr 72px auto; gap: 8px; margin-bottom: 8px; align-items: start; }
+  .rubric-row textarea { min-height: 52px; }
+  .tag { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 10px; background: var(--code);
+         color: var(--muted); margin-top: 4px; }
+  .note { font-size: 13px; padding: 9px 12px; border-radius: 6px; margin-top: 10px; }
+  .note.info { background: var(--code); color: var(--text); }
+  .note.fail { background: var(--bad-bg); color: var(--bad); }
+  .note.warn { background: var(--warn-bg); color: var(--warn); }
+  .error { background: var(--bad-bg); color: var(--bad); padding: 10px 12px; border-radius: 6px; margin-top: 12px; }
+  .score { font-size: 46px; font-weight: 700; color: var(--navy); line-height: 1.1; }
+  .score small { font-size: 22px; color: var(--muted); font-weight: 500; }
+  .badge { display: inline-block; padding: 4px 12px; border-radius: 14px; font-size: 13px; font-weight: 600; }
+  .badge.ok { background: var(--ok-bg); color: var(--ok); }
+  .badge.review { background: var(--warn-bg); color: var(--warn); }
+  .bar { height: 8px; background: var(--code); border-radius: 4px; overflow: hidden; margin: 6px 0 2px; }
+  .bar > span { display: block; height: 100%; background: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; }
+  .chip { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12px; font-weight: 600; }
+  .chip.yes { background: var(--ok-bg); color: var(--ok); }
+  .chip.no { background: var(--code); color: var(--muted); }
+  .chip.contradicted { background: var(--bad-bg); color: var(--bad); }
+  .row2 { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .hidden { display: none; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; padding: 0 0 26px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>AI Exam Answer Grader</h1>
+  <p class="sub">Group 2 · NLP Course Project 2026 · A triage aid — <strong>a human grader keeps final authority</strong> over every mark.</p>
+</header>
+<nav role="tablist">
+  <button role="tab" id="t-single" aria-selected="true" aria-controls="tab-single">Grade one answer</button>
+  <button role="tab" id="t-integ" aria-selected="false" aria-controls="tab-integ">Group 1 → Group 2 integration</button>
+</nav>
+
+<main>
+  <div id="banner" class="note warn hidden" role="status"></div>
+
+  <!-- ===================== single answer ===================== -->
+  <section id="tab-single" role="tabpanel">
+    <div class="grid">
+      <div class="panel">
+        <h2>1 · Input</h2>
+        <label for="preset">Load an example</label>
+        <select id="preset"><option value="">— choose —</option></select>
+        <div id="preset-note" class="note info hidden"></div>
+
+        <label for="question">Question</label>
+        <input type="text" id="question">
+        <label for="reference">Reference answer</label>
+        <textarea id="reference"></textarea>
+
+        <label>Rubric <span class="muted">(write each point as a full sentence)</span></label>
+        <div id="rubric"></div>
+        <button class="small" id="add-point" type="button">+ add rubric point</button>
+
+        <div class="row2">
+          <div style="flex:1;min-width:130px"><label for="max">Maximum score</label>
+            <input type="number" id="max" min="0.5" step="0.5" value="5"></div>
+          <div style="flex:1;min-width:150px"><label for="approach">Approach</label>
+            <select id="approach"><option value="hybrid">hybrid (default)</option>
+              <option value="embedding">embedding</option><option value="baseline">baseline</option></select></div>
+        </div>
+
+        <label for="student">Student answer</label>
+        <textarea id="student" style="min-height:110px"></textarea>
+        <button class="primary" id="grade" type="button">Grade this answer</button>
+        <div id="error" class="error hidden" role="alert"></div>
+      </div>
+
+      <div class="panel">
+        <h2>2 · Result</h2>
+        <div id="result"><p class="muted">Pick an example or type an answer, then press <em>Grade this answer</em>.
+          Every click calls the live API — nothing is pre-computed.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== integration ===================== -->
+  <section id="tab-integ" role="tabpanel" class="hidden">
+    <div class="note warn">The records below are <strong>MOCK data</strong> written by Group 2 in Group 1's published
+      schema (<code>student_id, question, answer_text, page, confidence</code>). They are not output from Group 1's live system.</div>
+    <div class="grid" style="margin-top:14px">
+      <div class="panel">
+        <h2>Group 1 records (editable JSON)</h2>
+        <textarea id="g1-records" class="mono"></textarea>
+        <label for="g1-key">Exam key — question number → question, reference answer, rubric, marks
+          <span class="muted">(neither group produces this today; faculty supply it)</span></label>
+        <textarea id="g1-key" class="mono"></textarea>
+        <div class="row2">
+          <div><label for="g1-thr">Send to a human if OCR confidence is below</label>
+            <input type="number" id="g1-thr" min="0" max="1" step="0.05" value="0.8"></div>
+        </div>
+        <button class="primary" id="g1-run" type="button">Grade the digitised exam</button>
+        <div id="g1-error" class="error hidden" role="alert"></div>
+      </div>
+      <div class="panel">
+        <h2>Graded exam</h2>
+        <div id="g1-result"><p class="muted">Press <em>Grade the digitised exam</em>.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>Calls <code>POST /evaluate-answer</code> and <code>POST /grade-digitized-answers</code> · API docs at <a href="/docs">/docs</a></footer>
+
+<script>
+"use strict";
+const API = location.protocol === "file:" ? "http://127.0.0.1:8000" : location.origin;
+const $ = (id) => document.getElementById(id);
+
+// Safe DOM builder: text is always set via textContent, never innerHTML.
+function el(tag, props, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(props || {})) {
+    if (k === "class") n.className = v; else if (k === "text") n.textContent = v; else n.setAttribute(k, v);
+  }
+  for (const kid of kids) if (kid != null) n.append(kid);
+  return n;
+}
+const fmt = (x) => (Number.isInteger(x) ? String(x) : x.toFixed(1));
+function showError(box, msg) { box.textContent = msg; box.classList.remove("hidden"); }
+function clearError(box) { box.textContent = ""; box.classList.add("hidden"); }
+
+async function api(path, body) {
+  const res = await fetch(API + path, { method: "POST", headers: { "Content-Type": "application/json" },
+                                         body: JSON.stringify(body) });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    let msg = "Request failed (HTTP " + res.status + ").";
+    if (Array.isArray(data.detail)) msg = data.detail.map((d) => (d.loc || []).slice(1).join(".") + ": " + d.msg).join(" | ");
+    else if (data.detail) msg = String(data.detail);
+    throw new Error(msg);
+  }
+  return data;
+}
+
+// ------------------------------------------------------------------ tabs
+function selectTab(which) {
+  const single = which === "single";
+  $("tab-single").classList.toggle("hidden", !single);
+  $("tab-integ").classList.toggle("hidden", single);
+  $("t-single").setAttribute("aria-selected", String(single));
+  $("t-integ").setAttribute("aria-selected", String(!single));
+}
+$("t-single").addEventListener("click", () => selectTab("single"));
+$("t-integ").addEventListener("click", () => selectTab("integ"));
+
+// ------------------------------------------------------------------ rubric editor
+let rubric = [];
+function renderRubric() {
+  const box = $("rubric");
+  box.replaceChildren();
+  rubric.forEach((p, i) => {
+    const text = el("textarea", { "aria-label": "Rubric point " + (i + 1) + " text" });
+    text.value = p.text; text.addEventListener("input", () => { p.text = text.value; });
+    const marks = el("input", { type: "number", min: "0.5", step: "0.5", "aria-label": "Marks for point " + (i + 1) });
+    marks.value = p.marks; marks.addEventListener("input", () => { p.marks = parseFloat(marks.value) || 0; });
+    const rm = el("button", { class: "small", type: "button", "aria-label": "Remove point " + (i + 1), text: "×" });
+    rm.addEventListener("click", () => { rubric.splice(i, 1); renderRubric(); });
+    const left = el("div", {}, text);
+    if (p.binding) left.append(el("span", { class: "tag", text: "fact-check rule attached (binding)" }));
+    if (p.cues) left.append(el("span", { class: "tag", text: "fact-check rule attached (cues)" }));
+    box.append(el("div", { class: "rubric-row" }, left, marks, rm));
+  });
+}
+$("add-point").addEventListener("click", () => {
+  rubric.push({ id: "p" + (rubric.length + 1), text: "", marks: 1 }); renderRubric();
+});
+
+// ------------------------------------------------------------------ presets
+let presets = [];
+let currentPreset = null;
+async function loadPresets() {
+  try {
+    presets = await (await fetch(API + "/examples/demo_presets.json")).json();
+    presets.forEach((p, i) => {
+      const o = el("option", { value: String(i), text: (p.is_known_failure ? "⚠ " : "") + p.label });
+      $("preset").append(o);
+    });
+  } catch (e) { showError($("error"), "Could not load the example list: " + e.message); }
+}
+$("preset").addEventListener("change", () => {
+  const note = $("preset-note"); clearError($("error"));
+  if ($("preset").value === "") { currentPreset = null; note.classList.add("hidden"); return; }
+  const p = presets[parseInt($("preset").value, 10)];
+  currentPreset = p;
+  $("question").value = p.question; $("reference").value = p.reference_answer;
+  $("max").value = p.maximum_score; $("student").value = p.student_answer;
+  $("approach").value = p.approach;
+  rubric = JSON.parse(JSON.stringify(p.rubric)); renderRubric();
+  note.className = "note " + (p.is_known_failure ? "fail" : "info");
+  note.textContent = (p.is_known_failure ? "Known failure — " : "What to look for — ") + p.expect;
+  $("result").replaceChildren(el("p", { class: "muted", text: "Press “Grade this answer”." }));
+});
+
+// ------------------------------------------------------------------ single grade
+function renderGrade(g, container) {
+  container.replaceChildren();
+  const score = el("div", { class: "score" }, fmt(g.score), el("small", { text: " / " + fmt(g.maximum_score) }));
+  const review = g.needs_human_review
+    ? el("span", { class: "badge review", text: "Needs human review" })
+    : el("span", { class: "badge ok", text: g.approach_used === "hybrid" ? "Approaches agree" : "No review flag (hybrid only)" });
+  container.append(score, el("div", {}, review));
+  if (currentPreset && currentPreset.reference_mark != null && $("student").value === currentPreset.student_answer) {
+    container.append(el("p", { class: "muted", style: "margin:10px 0 0",
+      text: "Reference mark: " + fmt(currentPreset.reference_mark) + " / " + fmt(g.maximum_score) +
+            " — a label authored by our team for this synthetic answer, not an independent grader's mark." }));
+  }
+
+  const pct = Math.round(g.confidence * 100);
+  const bar = el("div", { class: "bar", role: "img", "aria-label": "confidence " + pct + " percent" }, el("span", { style: "width:" + pct + "%" }));
+  const what = g.approach_used === "hybrid" ? "agreement between the two approaches"
+             : g.approach_used === "baseline" ? "agreement between its two signals" : "not validated — see docs";
+  container.append(el("p", { class: "muted", style: "margin:12px 0 0", text: "Confidence " + g.confidence + " (" + what + ")" }), bar);
+  container.append(el("p", { text: g.feedback }));
+  if (g.component_scores)
+    container.append(el("p", { class: "muted", text: "Component scores — baseline: " + fmt(g.component_scores.baseline) + " · embedding: " + fmt(g.component_scores.embedding) }));
+  if (g.point_breakdown && g.point_breakdown.length) {
+    const tbl = el("table", {});
+    tbl.append(el("tr", {}, ...["Rubric point", "Credited", "Sim.", "Best-matching sentence", "Fact-check"].map((h) => el("th", { text: h }))));
+    for (const p of g.point_breakdown) {
+      const fc = p.fact_check === "not_applicable" ? "—" : p.fact_check;
+      tbl.append(el("tr", {},
+        el("td", { text: p.point_text + " (" + fmt(p.marks) + ")" }),
+        el("td", {}, el("span", { class: "chip " + (p.credited ? "yes" : "no"), text: p.credited ? "yes" : "no" })),
+        el("td", { text: p.similarity.toFixed(2) }),
+        el("td", { text: p.best_matched_sentence }),
+        el("td", {}, el("span", { class: "chip " + (p.fact_check === "contradicted" ? "contradicted" : "no"), text: fc }))));
+    }
+    container.append(tbl);
+  }
+}
+$("grade").addEventListener("click", async () => {
+  const btn = $("grade"); clearError($("error"));
+  btn.disabled = true; btn.textContent = "Grading…";
+  try {
+    const body = { question: $("question").value, reference_answer: $("reference").value,
+                   rubric: rubric.map((p) => { const o = { id: p.id, text: p.text, marks: p.marks };
+                                                if (p.binding) o.binding = p.binding; if (p.cues) o.cues = p.cues; return o; }),
+                   student_answer: $("student").value, maximum_score: parseFloat($("max").value),
+                   approach: $("approach").value };
+    renderGrade(await api("/evaluate-answer", body), $("result"));
+  } catch (e) { showError($("error"), e.message); }
+  finally { btn.disabled = false; btn.textContent = "Grade this answer"; }
+});
+
+// ------------------------------------------------------------------ Group 1 integration
+async function loadMockGroup1() {
+  try {
+    const [recs, key] = await Promise.all([
+      fetch(API + "/examples/group1_sample_output.json").then((r) => r.json()),
+      fetch(API + "/examples/exam_key_sample.json").then((r) => r.json())]);
+    $("g1-records").value = JSON.stringify(recs, null, 2);
+    $("g1-key").value = JSON.stringify(key, null, 2);
+  } catch (e) { showError($("g1-error"), "Could not load the mock data: " + e.message); }
+}
+$("g1-run").addEventListener("click", async () => {
+  const btn = $("g1-run"); clearError($("g1-error"));
+  btn.disabled = true; btn.textContent = "Grading…";
+  try {
+    let answers, key;
+    try { answers = JSON.parse($("g1-records").value); key = JSON.parse($("g1-key").value); }
+    catch (e) { throw new Error("The JSON in one of the boxes is not valid: " + e.message); }
+    const out = await api("/grade-digitized-answers", { exam_id: "DEMO", exam_key: key, answers,
+                                                         approach: "hybrid", ocr_review_threshold: parseFloat($("g1-thr").value) });
+    const box = $("g1-result"); box.replaceChildren();
+    const s = out.summary;
+    box.append(el("p", {}, el("strong", { text: s.n_needs_human_review + " of " + s.n_answers }),
+      document.createTextNode(" answers need a human (" + s.n_graded + " graded, " + s.n_skipped + " skipped for lack of an exam key).")));
+    const tbl = el("table", {});
+    tbl.append(el("tr", {}, ...["Student", "Q", "Pages", "OCR", "Score", "Grader conf.", "Review"].map((h) => el("th", { text: h }))));
+    for (const r of out.results) {
+      const g = r.grade;
+      tbl.append(el("tr", {},
+        el("td", { text: r.student_id }), el("td", { text: r.question }), el("td", { text: r.pages.join(", ") }),
+        el("td", { text: r.ocr_confidence.toFixed(2) }),
+        el("td", { text: g ? fmt(g.score) + "/" + fmt(g.maximum_score) : "—" }),
+        el("td", { text: g ? g.confidence.toFixed(2) : "—" }),
+        el("td", {}, r.needs_human_review
+          ? el("span", { class: "chip contradicted", text: r.review_reasons.join(" · ") })
+          : el("span", { class: "chip yes", text: "no" }))));
+    }
+    box.append(tbl);
+  } catch (e) { showError($("g1-error"), e.message); }
+  finally { btn.disabled = false; btn.textContent = "Grade the digitised exam"; }
+});
+
+// ------------------------------------------------------------------ start-up
+(async function init() {
+  try {
+    const h = await (await fetch(API + "/health")).json();
+    if (h.status !== "ok") { const b = $("banner"); b.textContent = "Models are still loading — retry in a few seconds."; b.classList.remove("hidden"); }
+  } catch (e) {
+    const b = $("banner"); b.textContent = "Cannot reach the API at " + API + ". Start it with: uvicorn src.api.main:app --port 8000"; b.classList.remove("hidden");
+  }
+  await loadPresets(); await loadMockGroup1();
+})();
+</script>
+</body>
+</html>

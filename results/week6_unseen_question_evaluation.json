@@ -1,0 +1,57 @@
+{
+  "protocol": "leave-one-question-out over 15 questions; models fit on the other 14",
+  "overall": {
+    "baseline": {
+      "MAE": 1.271,
+      "RMSE": 1.822,
+      "pearson_r": 0.878,
+      "agreement_within_1_mark": 0.657,
+      "n": 70
+    },
+    "embedding": {
+      "MAE": 1.529,
+      "RMSE": 2.477,
+      "pearson_r": 0.806,
+      "agreement_within_1_mark": 0.557,
+      "n": 70
+    }
+  },
+  "normal_answers": {
+    "baseline": {
+      "MAE": 1.05,
+      "RMSE": 1.39,
+      "pearson_r": 0.936,
+      "agreement_within_1_mark": 0.683,
+      "n": 60
+    },
+    "embedding": {
+      "MAE": 1.5,
+      "RMSE": 2.515,
+      "pearson_r": 0.81,
+      "agreement_within_1_mark": 0.583,
+      "n": 60
+    }
+  },
+  "adversarial_and_robustness_answers": {
+    "baseline": {
+      "MAE": 2.6,
+      "RMSE": 3.413,
+      "pearson_r": 0.338,
+      "agreement_within_1_mark": 0.5,
+      "n": 10
+    },
+    "embedding": {
+      "MAE": 1.7,
+      "RMSE": 2.236,
+      "pearson_r": 0.773,
+      "agreement_within_1_mark": 0.4,
+      "n": 10
+    }
+  },
+  "embedding_point_level": {
+    "precision": 0.734,
+    "recall": 0.867,
+    "f1": 0.795,
+    "n_points": 238
+  }
+}

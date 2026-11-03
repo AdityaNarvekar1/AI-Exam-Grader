@@ -1,0 +1,332 @@
+{
+  "Q1": {
+    "question": "Which of the following is an assumption of Linear Regression?",
+    "question_type": "mcq",
+    "correct_option": "B",
+    "maximum_score": 1.0
+  },
+  "Q2": {
+    "question": "In a perfectly fitted regression model, the sum of residuals (errors) should be:",
+    "question_type": "mcq",
+    "correct_option": "C",
+    "maximum_score": 1.0
+  },
+  "Q3": {
+    "question": "Which distance metric is specifically used for categorical variables or strings of equal length?",
+    "question_type": "mcq",
+    "correct_option": "A",
+    "maximum_score": 1.0
+  },
+  "Q4": {
+    "question": "Supervised learning can be split into which two main categories?",
+    "question_type": "mcq",
+    "correct_option": "C",
+    "maximum_score": 1.0
+  },
+  "Q5": {
+    "question": "Which of the following is an ensemble learning method based on decision trees?",
+    "question_type": "mcq",
+    "correct_option": "B",
+    "maximum_score": 1.0
+  },
+  "Q6": {
+    "question": "The process of combining multiple classifiers to improve prediction (e.g., Bagging or Boosting) is called:",
+    "question_type": "mcq",
+    "correct_option": "A",
+    "maximum_score": 1.0
+  },
+  "Q7": {
+    "question": "In a Confusion Matrix, what is the value of the error for a perfect classifier?",
+    "question_type": "mcq",
+    "correct_option": "A",
+    "maximum_score": 1.0
+  },
+  "Q8": {
+    "question": "Which visualization tool is most effective for identifying correlations between two continuous variables?",
+    "question_type": "mcq",
+    "correct_option": "C",
+    "maximum_score": 1.0
+  },
+  "Q9": {
+    "question": "In a scatter plot, individual data observations are represented as:",
+    "question_type": "mcq",
+    "correct_option": "A",
+    "maximum_score": 1.0
+  },
+  "Q10": {
+    "question": "Which measure of central tendency is most sensitive to outliers?",
+    "question_type": "mcq",
+    "correct_option": "B",
+    "maximum_score": 1.0
+  },
+  "Q11": {
+    "question": "In regression analysis, the output (dependent variable) is typically:",
+    "question_type": "mcq",
+    "correct_option": "B",
+    "maximum_score": 1.0
+  },
+  "Q12": {
+    "question": "The process of identifying the most relevant variables to use in a model is known as:",
+    "question_type": "mcq",
+    "correct_option": "C",
+    "maximum_score": 1.0
+  },
+  "Q13": {
+    "question": "Which technique is used to predict a continuous numerical value?",
+    "question_type": "mcq",
+    "correct_option": "B",
+    "maximum_score": 1.0
+  },
+  "Q14": {
+    "question": "Analysis that involves data points collected or recorded at specific time intervals is called:",
+    "question_type": "mcq",
+    "correct_option": "C",
+    "maximum_score": 1.0
+  },
+  "Q15": {
+    "question": "Which of the following is actually a classification algorithm despite its name?",
+    "question_type": "mcq",
+    "correct_option": "B",
+    "maximum_score": 1.0
+  },
+  "Q16": {
+    "question": "Hyperparameters are best described as:",
+    "question_type": "mcq",
+    "correct_option": "C",
+    "maximum_score": 1.0
+  },
+  "Q17": {
+    "question": "(True/False): Logistic regression is used for predicting continuous outcomes.",
+    "question_type": "mcq",
+    "correct_option": "B",
+    "maximum_score": 1.0
+  },
+  "Q18": {
+    "question": "In a confusion matrix, where are the \"Correct Predictions\" located?",
+    "question_type": "mcq",
+    "correct_option": "C",
+    "maximum_score": 1.0
+  },
+  "Q19": {
+    "question": "What is the formula for Precision?",
+    "question_type": "mcq",
+    "correct_option": "B",
+    "maximum_score": 1.0
+  },
+  "Q20": {
+    "question": "In Support Vector Machines (SVM), the data points closest to the hyperplane that help define the margin are called:",
+    "question_type": "mcq",
+    "correct_option": "B",
+    "maximum_score": 1.0
+  },
+  "Q21": {
+    "question": "Define Supervised Learning.",
+    "question_type": "short",
+    "reference_answer": "A type of ML where the model is trained on labeled data with known inputs and outputs.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "A type of ML where the model is trained on labeled data with known inputs and outputs",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q22": {
+    "question": "Evaluation Case Study: A model (M1) achieves 99% accuracy on the training set but only 30% accuracy on the testing set. What is happening to this model?",
+    "question_type": "short",
+    "reference_answer": "Overfitting; the model has memorized the training data but failed to generalize.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "Overfitting, the model has memorized the training data but failed to generalize",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q23": {
+    "question": "What is Regression Analysis?",
+    "question_type": "short",
+    "reference_answer": "A statistical process for estimating the relationships between a dependent variable and one or more independent variables.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "A statistical process for estimating the relationships between a dependent variable and one or more independent variables",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q24": {
+    "question": "List and elucidate two major challenges in Machine Learning.",
+    "question_type": "short",
+    "reference_answer": "Data quality/missing values, overfitting/underfitting, data collection, or time consumption.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "Data quality/missing values, overfitting/underfitting, data collection, or time consumption",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q25": {
+    "question": "List any two major real-world applications of Data Science.",
+    "question_type": "short",
+    "reference_answer": "Healthcare/disease prediction, Finance/fraud detection, E-commerce recommendation systems.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "Healthcare/disease prediction, Finance/fraud detection, E-commerce recommendation systems",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q26": {
+    "question": "Distinguish between Structured and Semi-structured data.",
+    "question_type": "short",
+    "reference_answer": "Structured is organized in rows/columns (SQL, Excel); Semi-structured has some markers but isn't in a grid (JSON, XML, HTML).",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "Structured is organized in rows/columns (SQL, Excel)",
+        "marks": 1.0
+      },
+      {
+        "id": "p2",
+        "text": "Semi-structured has some markers but isn't in a grid (JSON, XML, HTML)",
+        "marks": 1.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q27": {
+    "question": "Describe methods used to detect and handle outliers in a dataset.",
+    "question_type": "short",
+    "reference_answer": "Detection: Z-score, IQR, Scatter plots, Box plots. Handling: Trimming, Capping, or Imputation.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "Detection: Z-score, IQR, Scatter plots, Box plots.",
+        "marks": 1.0
+      },
+      {
+        "id": "p2",
+        "text": "Handling: Trimming, Capping, or Imputation.",
+        "marks": 1.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q28": {
+    "question": "What is Data Pre-processing?",
+    "question_type": "short",
+    "reference_answer": "The steps taken to clean and transform raw data into a format suitable for a machine learning model.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "The steps taken to clean and transform raw data into a format suitable for a machine learning model",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q29": {
+    "question": "Why is Data Normalization required for the K-Nearest Neighbors (K-NN) algorithm?",
+    "question_type": "short",
+    "reference_answer": "K-NN is distance-based; features with larger scales will dominate the distance calculation if not normalized.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "K-NN is distance-based",
+        "marks": 1.0
+      },
+      {
+        "id": "p2",
+        "text": "features with larger scales will dominate the distance calculation if not normalized",
+        "marks": 1.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q30": {
+    "question": "How are continuous attributes discretized? Give an example.",
+    "question_type": "short",
+    "reference_answer": "By grouping values into bins or intervals, e.g., turning ages 1-100 into 'Child,' 'Adult,' 'Senior.'",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "By grouping values into bins or intervals, e.g., turning ages 1-100 into 'Child,' 'Adult,' 'Senior.'",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q31": {
+    "question": "What does the 'K' represent in the K-Means clustering algorithm?",
+    "question_type": "short",
+    "reference_answer": "The predefined number of clusters or groups the data will be divided into.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "The predefined number of clusters or groups the data will be divided into",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q32": {
+    "question": "Name three common Hyperparameters in Machine Learning algorithms.",
+    "question_type": "short",
+    "reference_answer": "K in K-NN, Learning Rate, Number of Estimators/Trees, Max Depth, or Batch Size.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "K in K-NN, Learning Rate, Number of Estimators/Trees, Max Depth, or Batch Size",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q33": {
+    "question": "Define Gradient Descent.",
+    "question_type": "short",
+    "reference_answer": "An optimization algorithm used to minimize the cost function by iteratively moving toward the steepest descent.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "An optimization algorithm used to minimize the cost function by iteratively moving toward the steepest descent",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q34": {
+    "question": "Classifier Comparison: Compare three SVM classifiers based on their margins and boundaries.",
+    "question_type": "short",
+    "reference_answer": "Discussion on maximizing the margin and ensuring no data points fall within the 'gutter' or margin.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "Discussion on maximizing the margin and ensuring no data points fall within the 'gutter' or margin",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  },
+  "Q35": {
+    "question": "Explain how the Radial Basis Function (RBF) Kernel works in SVM.",
+    "question_type": "short",
+    "reference_answer": "It transforms data into a higher-dimensional space to find a non-linear decision boundary.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "It transforms data into a higher-dimensional space to find a non-linear decision boundary",
+        "marks": 2.0
+      }
+    ],
+    "maximum_score": 2.0
+  }
+}

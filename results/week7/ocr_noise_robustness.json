@@ -1,0 +1,348 @@
+{
+  "measured_CER": {
+    "cer~0.00": 0.0,
+    "cer~0.05": 0.05,
+    "cer~0.10": 0.095,
+    "cer~0.20": 0.176,
+    "truncated_40pct": 0.414,
+    "cer~0.10+truncated": 0.467
+  },
+  "graders": {
+    "length": {
+      "cer~0.00": {
+        "n": 85,
+        "MAE": 3.471,
+        "nMAE_pct_of_max": 42.65,
+        "RMSE": 4.32,
+        "pearson_r": 0.266,
+        "spearman_rho": 0.179,
+        "QWK": 0.02,
+        "within_10pct_of_max": 0.188,
+        "within_1_mark": 0.235,
+        "MAE_ci95": {
+          "estimate": 3.471,
+          "ci_low": 3.006,
+          "ci_high": 3.944,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      },
+      "cer~0.05": {
+        "n": 85,
+        "MAE": 3.494,
+        "nMAE_pct_of_max": 42.94,
+        "RMSE": 4.337,
+        "pearson_r": 0.252,
+        "spearman_rho": 0.165,
+        "QWK": 0.007,
+        "within_10pct_of_max": 0.188,
+        "within_1_mark": 0.235,
+        "MAE_ci95": {
+          "estimate": 3.494,
+          "ci_low": 3.018,
+          "ci_high": 3.977,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      },
+      "cer~0.10": {
+        "n": 85,
+        "MAE": 3.447,
+        "nMAE_pct_of_max": 42.41,
+        "RMSE": 4.279,
+        "pearson_r": 0.266,
+        "spearman_rho": 0.182,
+        "QWK": 0.029,
+        "within_10pct_of_max": 0.165,
+        "within_1_mark": 0.235,
+        "MAE_ci95": {
+          "estimate": 3.447,
+          "ci_low": 2.982,
+          "ci_high": 3.911,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      },
+      "cer~0.20": {
+        "n": 85,
+        "MAE": 3.459,
+        "nMAE_pct_of_max": 42.47,
+        "RMSE": 4.279,
+        "pearson_r": 0.255,
+        "spearman_rho": 0.164,
+        "QWK": 0.027,
+        "within_10pct_of_max": 0.188,
+        "within_1_mark": 0.247,
+        "MAE_ci95": {
+          "estimate": 3.459,
+          "ci_low": 2.97,
+          "ci_high": 3.952,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      },
+      "truncated_40pct": {
+        "n": 85,
+        "MAE": 3.224,
+        "nMAE_pct_of_max": 40.35,
+        "RMSE": 3.953,
+        "pearson_r": 0.214,
+        "spearman_rho": 0.128,
+        "QWK": -0.016,
+        "within_10pct_of_max": 0.165,
+        "within_1_mark": 0.188,
+        "MAE_ci95": {
+          "estimate": 3.224,
+          "ci_low": 2.849,
+          "ci_high": 3.585,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      },
+      "cer~0.10+truncated": {
+        "n": 85,
+        "MAE": 3.224,
+        "nMAE_pct_of_max": 40.35,
+        "RMSE": 3.954,
+        "pearson_r": 0.21,
+        "spearman_rho": 0.128,
+        "QWK": -0.032,
+        "within_10pct_of_max": 0.176,
+        "within_1_mark": 0.188,
+        "MAE_ci95": {
+          "estimate": 3.224,
+          "ci_low": 2.835,
+          "ci_high": 3.598,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      }
+    },
+    "tfidf": {
+      "cer~0.00": {
+        "n": 85,
+        "MAE": 2.429,
+        "nMAE_pct_of_max": 29.53,
+        "RMSE": 3.062,
+        "pearson_r": 0.595,
+        "spearman_rho": 0.634,
+        "QWK": 0.442,
+        "within_10pct_of_max": 0.282,
+        "within_1_mark": 0.306,
+        "MAE_ci95": {
+          "estimate": 2.429,
+          "ci_low": 2.054,
+          "ci_high": 2.796,
+          "n_groups": 15
+        },
+        "mean_confidence": 0.87,
+        "review_flag_rate": null
+      },
+      "cer~0.05": {
+        "n": 85,
+        "MAE": 2.529,
+        "nMAE_pct_of_max": 30.88,
+        "RMSE": 3.271,
+        "pearson_r": 0.561,
+        "spearman_rho": 0.616,
+        "QWK": 0.338,
+        "within_10pct_of_max": 0.329,
+        "within_1_mark": 0.341,
+        "MAE_ci95": {
+          "estimate": 2.529,
+          "ci_low": 2.142,
+          "ci_high": 2.906,
+          "n_groups": 15
+        },
+        "mean_confidence": 0.853,
+        "review_flag_rate": null
+      },
+      "cer~0.10": {
+        "n": 85,
+        "MAE": 2.665,
+        "nMAE_pct_of_max": 32.65,
+        "RMSE": 3.554,
+        "pearson_r": 0.522,
+        "spearman_rho": 0.581,
+        "QWK": 0.279,
+        "within_10pct_of_max": 0.365,
+        "within_1_mark": 0.388,
+        "MAE_ci95": {
+          "estimate": 2.665,
+          "ci_low": 2.273,
+          "ci_high": 3.05,
+          "n_groups": 15
+        },
+        "mean_confidence": 0.843,
+        "review_flag_rate": null
+      },
+      "cer~0.20": {
+        "n": 85,
+        "MAE": 3.029,
+        "nMAE_pct_of_max": 37.18,
+        "RMSE": 4.09,
+        "pearson_r": 0.445,
+        "spearman_rho": 0.472,
+        "QWK": 0.143,
+        "within_10pct_of_max": 0.318,
+        "within_1_mark": 0.376,
+        "MAE_ci95": {
+          "estimate": 3.029,
+          "ci_low": 2.6,
+          "ci_high": 3.434,
+          "n_groups": 15
+        },
+        "mean_confidence": 0.843,
+        "review_flag_rate": null
+      },
+      "truncated_40pct": {
+        "n": 85,
+        "MAE": 2.741,
+        "nMAE_pct_of_max": 33.76,
+        "RMSE": 3.559,
+        "pearson_r": 0.548,
+        "spearman_rho": 0.586,
+        "QWK": 0.313,
+        "within_10pct_of_max": 0.306,
+        "within_1_mark": 0.329,
+        "MAE_ci95": {
+          "estimate": 2.741,
+          "ci_low": 2.369,
+          "ci_high": 3.106,
+          "n_groups": 15
+        },
+        "mean_confidence": 0.864,
+        "review_flag_rate": null
+      },
+      "cer~0.10+truncated": {
+        "n": 85,
+        "MAE": 3.088,
+        "nMAE_pct_of_max": 38.06,
+        "RMSE": 4.1,
+        "pearson_r": 0.479,
+        "spearman_rho": 0.486,
+        "QWK": 0.182,
+        "within_10pct_of_max": 0.306,
+        "within_1_mark": 0.329,
+        "MAE_ci95": {
+          "estimate": 3.088,
+          "ci_low": 2.667,
+          "ci_high": 3.506,
+          "n_groups": 15
+        },
+        "mean_confidence": 0.856,
+        "review_flag_rate": null
+      }
+    },
+    "lexical": {
+      "cer~0.00": {
+        "n": 85,
+        "MAE": 2.012,
+        "nMAE_pct_of_max": 24.35,
+        "RMSE": 3.447,
+        "pearson_r": 0.559,
+        "spearman_rho": 0.621,
+        "QWK": 0.519,
+        "within_10pct_of_max": 0.576,
+        "within_1_mark": 0.588,
+        "MAE_ci95": {
+          "estimate": 2.012,
+          "ci_low": 1.577,
+          "ci_high": 2.469,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      },
+      "cer~0.05": {
+        "n": 85,
+        "MAE": 2.476,
+        "nMAE_pct_of_max": 29.65,
+        "RMSE": 3.877,
+        "pearson_r": 0.425,
+        "spearman_rho": 0.531,
+        "QWK": 0.388,
+        "within_10pct_of_max": 0.482,
+        "within_1_mark": 0.518,
+        "MAE_ci95": {
+          "estimate": 2.476,
+          "ci_low": 1.958,
+          "ci_high": 3.022,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      },
+      "cer~0.10": {
+        "n": 85,
+        "MAE": 2.9,
+        "nMAE_pct_of_max": 35.76,
+        "RMSE": 4.389,
+        "pearson_r": 0.303,
+        "spearman_rho": 0.387,
+        "QWK": 0.206,
+        "within_10pct_of_max": 0.412,
+        "within_1_mark": 0.447,
+        "MAE_ci95": {
+          "estimate": 2.9,
+          "ci_low": 2.422,
+          "ci_high": 3.431,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      },
+      "cer~0.20": {
+        "n": 85,
+        "MAE": 3.818,
+        "nMAE_pct_of_max": 47.29,
+        "RMSE": 5.292,
+        "pearson_r": 0.073,
+        "spearman_rho": 0.088,
+        "QWK": 0.003,
+        "within_10pct_of_max": 0.329,
+        "within_1_mark": 0.341,
+        "MAE_ci95": {
+          "estimate": 3.818,
+          "ci_low": 3.285,
+          "ci_high": 4.365,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      },
+      "truncated_40pct": {
+        "n": 85,
+        "MAE": 2.741,
+        "nMAE_pct_of_max": 33.24,
+        "RMSE": 3.881,
+        "pearson_r": 0.48,
+        "spearman_rho": 0.537,
+        "QWK": 0.368,
+        "within_10pct_of_max": 0.365,
+        "within_1_mark": 0.388,
+        "MAE_ci95": {
+          "estimate": 2.741,
+          "ci_low": 2.259,
+          "ci_high": 3.244,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      },
+      "cer~0.10+truncated": {
+        "n": 85,
+        "MAE": 3.5,
+        "nMAE_pct_of_max": 43.47,
+        "RMSE": 4.78,
+        "pearson_r": 0.328,
+        "spearman_rho": 0.36,
+        "QWK": 0.09,
+        "within_10pct_of_max": 0.294,
+        "within_1_mark": 0.306,
+        "MAE_ci95": {
+          "estimate": 3.5,
+          "ci_low": 2.982,
+          "ci_high": 4.024,
+          "n_groups": 15
+        },
+        "review_flag_rate": null
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "overall": {
+    "baseline_tfidf": {
+      "MAE": 1.42,
+      "RMSE": 2.551,
+      "pearson_r": 0.763,
+      "agreement_within_1_mark": 0.64,
+      "n": 25
+    },
+    "improved_embedding": {
+      "MAE": 1.04,
+      "RMSE": 1.463,
+      "pearson_r": 0.928,
+      "agreement_within_1_mark": 0.6,
+      "n": 25
+    }
+  },
+  "by_subset": {
+    "baseline_tfidf": {
+      "normal": {
+        "MAE": 0.6,
+        "RMSE": 1.225,
+        "pearson_r": 0.95,
+        "agreement_within_1_mark": 0.8,
+        "n": 20
+      },
+      "adversarial": {
+        "MAE": 4.7,
+        "RMSE": 5.153,
+        "pearson_r": -0.388,
+        "agreement_within_1_mark": 0.0,
+        "n": 5
+      }
+    },
+    "improved_embedding": {
+      "normal": {
+        "MAE": 0.825,
+        "RMSE": 1.28,
+        "pearson_r": 0.944,
+        "agreement_within_1_mark": 0.7,
+        "n": 20
+      },
+      "adversarial": {
+        "MAE": 1.9,
+        "RMSE": 2.037,
+        "pearson_r": 0.918,
+        "agreement_within_1_mark": 0.2,
+        "n": 5
+      }
+    }
+  },
+  "wins": {
+    "improved_better": 8,
+    "baseline_better": 6,
+    "tie": 11
+  }
+}

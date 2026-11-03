@@ -1,0 +1,245 @@
+[
+  {
+    "id": "correct",
+    "label": "Correct answer",
+    "is_known_failure": false,
+    "expect": "Both approaches give full marks and agree, so nothing is flagged.",
+    "reference_mark": 5.0,
+    "question": "Explain the difference between a stack and a queue, with real-world examples.",
+    "reference_answer": "A stack follows Last-In-First-Out (LIFO) order, where the most recently added element is removed first, like a stack of plates. A queue follows First-In-First-Out (FIFO) order, where the earliest added element is removed first, like a queue of people waiting in line.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "A stack follows a last-in-first-out order, and a correct real-world example is given",
+        "marks": 2.5,
+        "binding": {
+          "subject_terms": [
+            "stack"
+          ],
+          "correct_value_terms": [
+            "last-in-first-out",
+            "last in first out",
+            "lifo"
+          ],
+          "contradicting_value_terms": [
+            "first-in-first-out",
+            "first in first out",
+            "fifo"
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "text": "A queue follows a first-in-first-out order, and a correct real-world example is given",
+        "marks": 2.5,
+        "binding": {
+          "subject_terms": [
+            "queue"
+          ],
+          "correct_value_terms": [
+            "first-in-first-out",
+            "first in first out",
+            "fifo"
+          ],
+          "contradicting_value_terms": [
+            "last-in-first-out",
+            "last in first out",
+            "lifo"
+          ]
+        }
+      }
+    ],
+    "maximum_score": 5,
+    "student_answer": "A stack works on Last-In-First-Out order, so the last element added is the first one removed, like a stack of plates where you take from the top. A queue works on First-In-First-Out order, so the first element added is the first one removed, like people standing in a line waiting for a bus.",
+    "approach": "hybrid"
+  },
+  {
+    "id": "paraphrase",
+    "label": "Correct answer in different words (paraphrase)",
+    "is_known_failure": false,
+    "expect": "Compare component scores: the baseline cannot see a paraphrase (low), the embedding can (higher). The hybrid lands in between - averaging dilutes the embedding's correct credit - and is flagged because the approaches disagree. Switch Approach to 'embedding' to see the higher score.",
+    "reference_mark": 9.5,
+    "question": "State and explain the Central Limit Theorem (CLT).",
+    "reference_answer": "The Central Limit Theorem states that the sampling distribution of the sample mean approaches a normal distribution as the sample size becomes large, regardless of the shape of the population distribution, provided the population has a finite variance. In practice, this holds reasonably well for sample sizes of about 30 or more. The CLT is important because it allows us to use normal-distribution-based inference (confidence intervals, hypothesis tests) even when the underlying population is not normal.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "The sampling distribution of the sample mean tends toward a normal distribution",
+        "marks": 3
+      },
+      {
+        "id": "p2",
+        "text": "This holds true regardless of the shape of the population distribution, as long as the population has finite variance",
+        "marks": 3
+      },
+      {
+        "id": "p3",
+        "text": "A common practical rule of thumb is that this approximation holds well once the sample size is around 30 or more",
+        "marks": 2
+      },
+      {
+        "id": "p4",
+        "text": "This theorem matters because it allows normal-distribution-based inference even when the underlying population is not normal",
+        "marks": 2
+      }
+    ],
+    "maximum_score": 10,
+    "student_answer": "No matter how strangely shaped your original data is, if you keep drawing bigger and bigger groups of samples and averaging each group, those averages start clustering into a bell-shaped pattern once each group has roughly thirty or more items. That is basically why we are allowed to use bell-curve-based confidence math even on messy, non-normal real-world data.",
+    "approach": "hybrid"
+  },
+  {
+    "id": "keyword_salad",
+    "label": "Keyword salad with no explanation",
+    "is_known_failure": false,
+    "expect": "Vocabulary alone should not earn marks. The embedding gives ~0, but the baseline rewards the vocabulary overlap, so the hybrid is mid-scale - and flagged because the approaches disagree.",
+    "reference_mark": 1.0,
+    "question": "What is a JOIN in SQL? Explain INNER JOIN vs LEFT JOIN with an example.",
+    "reference_answer": "A JOIN combines rows from two or more tables based on a related column between them. An INNER JOIN returns only the rows where there is a match in both tables. A LEFT JOIN returns all rows from the left table and the matched rows from the right table, filling in NULLs for right-table columns when there is no match. For example, joining a Students table with an Enrollments table using INNER JOIN would return only students who have at least one enrollment, whereas a LEFT JOIN would also include students with zero enrollments.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "A JOIN combines rows from two or more tables based on a related column between them",
+        "marks": 2
+      },
+      {
+        "id": "p2",
+        "text": "An INNER JOIN returns only the rows that have matching values in both tables",
+        "marks": 3
+      },
+      {
+        "id": "p3",
+        "text": "A LEFT JOIN returns all rows from the left table along with NULL values for unmatched rows from the right table",
+        "marks": 3
+      },
+      {
+        "id": "p4",
+        "text": "A correct illustrative example is given showing the difference between an INNER JOIN and a LEFT JOIN",
+        "marks": 2
+      }
+    ],
+    "maximum_score": 10,
+    "student_answer": "JOIN INNER JOIN LEFT JOIN tables rows columns match SQL database query example students enrollments records.",
+    "approach": "hybrid"
+  },
+  {
+    "id": "swapped",
+    "label": "Definitions swapped (LIFO <-> FIFO)",
+    "is_known_failure": false,
+    "expect": "Fact-check veto: score 0 although the baseline alone would give about 4.5/5. Flagged for review; feedback names the factual error.",
+    "reference_mark": 0.5,
+    "question": "Explain the difference between a stack and a queue, with real-world examples.",
+    "reference_answer": "A stack follows Last-In-First-Out (LIFO) order, where the most recently added element is removed first, like a stack of plates. A queue follows First-In-First-Out (FIFO) order, where the earliest added element is removed first, like a queue of people waiting in line.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "A stack follows a last-in-first-out order, and a correct real-world example is given",
+        "marks": 2.5,
+        "binding": {
+          "subject_terms": [
+            "stack"
+          ],
+          "correct_value_terms": [
+            "last-in-first-out",
+            "last in first out",
+            "lifo"
+          ],
+          "contradicting_value_terms": [
+            "first-in-first-out",
+            "first in first out",
+            "fifo"
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "text": "A queue follows a first-in-first-out order, and a correct real-world example is given",
+        "marks": 2.5,
+        "binding": {
+          "subject_terms": [
+            "queue"
+          ],
+          "correct_value_terms": [
+            "first-in-first-out",
+            "first in first out",
+            "fifo"
+          ],
+          "contradicting_value_terms": [
+            "last-in-first-out",
+            "last in first out",
+            "lifo"
+          ]
+        }
+      }
+    ],
+    "maximum_score": 5,
+    "student_answer": "A stack follows a First-In-First-Out order, similar to people standing in a line waiting for a bus, while a queue follows a Last-In-First-Out order, similar to a stack of plates where you take the top one first.",
+    "approach": "hybrid"
+  },
+  {
+    "id": "fail_refusal",
+    "label": "KNOWN FAILURE: an honest refusal earns marks",
+    "is_known_failure": true,
+    "expect": "Should score 0. The embedding credits it (exam-related words match the rubric), the baseline correctly gives 0, and the hybrid lands in between. Confidence is 0 so it is flagged - the safety net works, but the score is still wrong. This answer is part of the calibration data and is STILL credited.",
+    "reference_mark": 0.0,
+    "question": "Differentiate between Type I and Type II errors in hypothesis testing.",
+    "reference_answer": "A Type I error occurs when the null hypothesis is rejected even though it is actually true (a false positive), and its probability is denoted by alpha, the significance level. A Type II error occurs when the null hypothesis is not rejected even though it is actually false (a false negative), and its probability is denoted by beta.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "A Type I error occurs when a true null hypothesis is incorrectly rejected, which is a false positive with probability alpha",
+        "marks": 2.5,
+        "binding": {
+          "subject_terms": [
+            "type i",
+            "type 1"
+          ],
+          "correct_value_terms": [
+            "false positive"
+          ],
+          "contradicting_value_terms": [
+            "false negative"
+          ]
+        }
+      },
+      {
+        "id": "p2",
+        "text": "A Type II error occurs when a false null hypothesis is not rejected, which is a false negative with probability beta",
+        "marks": 2.5,
+        "binding": {
+          "subject_terms": [
+            "type ii",
+            "type 2"
+          ],
+          "correct_value_terms": [
+            "false negative"
+          ],
+          "contradicting_value_terms": [
+            "false positive"
+          ]
+        }
+      }
+    ],
+    "maximum_score": 5,
+    "student_answer": "I don't know the answer to this question. I did not get a chance to study this topic before the exam.",
+    "approach": "hybrid"
+  },
+  {
+    "id": "fail_terse_rubric",
+    "label": "KNOWN FAILURE: terse rubric flips a correct answer to 0",
+    "is_known_failure": true,
+    "expect": "Approach is 'embedding'. A correct answer scores 0 because the terse rubric wording puts its similarity just under the credit boundary; rewording the rubric to a fuller sentence flips it. Fix: write rubric points as full sentences.",
+    "reference_mark": 5.0,
+    "question": "Explain the difference between a stack and a queue, with real-world examples.",
+    "reference_answer": "A stack follows Last-In-First-Out (LIFO) order, where the most recently added element is removed first, like a stack of plates. A queue follows First-In-First-Out (FIFO) order, where the earliest added element is removed first, like a queue of people waiting in line.",
+    "rubric": [
+      {
+        "id": "p1",
+        "text": "A stack follows a last-in-first-out order",
+        "marks": 5
+      }
+    ],
+    "maximum_score": 5,
+    "student_answer": "A stack is last in first out.",
+    "approach": "embedding"
+  }
+]
